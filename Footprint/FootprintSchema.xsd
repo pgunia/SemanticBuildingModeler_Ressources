@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  xmlns:smcb_fp="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+  xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+  xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
+  xmlns:smcb_cb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
+  xmlns:smcb_pb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
+  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement/ObjectplacementSchema.xsd"/>
+  
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd"/>
+  
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint/ClassBasedFootprintSchema.xsd"/>
+  
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint/PolygonFootprintSchema.xsd"/>
+  
+  
+  <!--  ############################## Footprint-Declaration ############################## -->
+  <xs:element name="footprint">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Footprint-Element contains all necessary information to
+        create a footprint for a building / floor. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="smcb_ct:extern"/>
+        <xs:choice>
+          <xs:element ref="smcb_cb:classBased"/>
+          <xs:element ref="smcb_eb:exampleBased"/>
+          <xs:element ref="smcb_op:objectplacement"/>
+          <xs:element ref="smcb_pb:polygonBased" />
+       </xs:choice>
+      </xs:choice>
+      <xs:attribute name="src" use="required" type="smcb_fp:footprintSource"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="footprintSource">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Enumeration contains all avaiable footprint-sources.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="objectplacement" />
+      <xs:enumeration value="class" />
+      <xs:enumeration value="exampleBased" />
+      <xs:enumeration value="polygonFootprint" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

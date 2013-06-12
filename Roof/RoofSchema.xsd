@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof">
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/%7Epgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+
+  <xs:element name="roof">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Roof-Element contains all necessary information to construct
+        a roof. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="smcb_ro:roofDescriptor"/>
+        <xs:element ref="smcb_ct:extern"/>
+        <xs:element ref="smcb_ro:roofDescriptorMansardRoof" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Roof-Descriptor for standard roofs -->
+  <xs:element name="roofDescriptor">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Roof-Element contains all necessary information to construct
+        a roof. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="roofScaling" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Factor which is used to scale the footprint of the
+              upper floor. Roof-Scaling realizes an effect where the roof has an overhang over the
+              building-floors. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="roofSlopeSide" type="smcb_ro:rangeRadRoof">
+          <xs:annotation>
+            <xs:documentation> Slope (in radians) of the roof at the side-walls of the building.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="roofSlopeMain" type="smcb_ro:rangeRadRoof">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Slope (in radians) of the roof at the main-walls of the
+              building. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="equalWeightForRoofSides" type="smcb_ct:floatFrom0To1" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> If the Roof-Slopes aren´t fixed the system decides
+              wether or not to use the same slopes for all building-sides. This parameter describes
+              the probability that all sides get the same slope assigned. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Roof-Descriptor for mansard roofs -->
+  <xs:element name="roofDescriptorMansardRoof">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Mansarde-Roof-Element contains all necessary information to construct
+        a mansard roof. A mansard roof has two different slopes, the roof starts with a higher slope until it reaches a given height. After this point, the slope is reduced. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="roofScaling" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Factor which is used to scale the footprint of the
+              upper floor. Roof-Scaling realizes an effect where the roof has an overhang over the
+              building-floors. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        
+        <xs:element name="roofFirstSlopeSide" type="smcb_ro:rangeRadRoof">
+          <xs:annotation>
+            <xs:documentation> Starting-slope (in radians) of the roof at the side-walls of the building.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        
+        <xs:element name="roofSecondSlopeSide" type="smcb_ro:rangeRadRoof">
+          <xs:annotation>
+            <xs:documentation> End-slope (in radians) of the roof at the side-walls of the building.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        
+        <xs:element name="roofFirstSlopeMain" type="smcb_ro:rangeRadRoof">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Starting-slope (in radians) of the roof at the main-walls of the
+              building. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="roofSecondSlopeMain" type="smcb_ro:rangeRadRoof">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> End-slope (in radians) of the roof at the main-walls of the
+              building. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        
+        <xs:element name="slopeChangeHeight" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              The roof-height at which the slope changes between the starting-slope and the end-slope of the roof. Due to the structure of the weighted straight skeleton algorithm, the actual change-height may be higher. Thus the provided value is the minimum height at which the system may change the slope.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        
+        <xs:element name="equalWeightForRoofSides" type="smcb_ct:floatFrom0To1" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> If the Roof-Slopes aren´t fixed the system decides
+              wether or not to use the same slopes for all building-sides. This parameter describes
+              the probability that all sides get the same slope assigned. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  
+
+  <!-- Complex Datatype for Roof-Slope in Radians -->
+  <xs:complexType name="rangeRadRoof">
+    <xs:sequence>
+      <xs:element name="lowerBorder">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="1.571"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="upperBorder" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="1.571"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

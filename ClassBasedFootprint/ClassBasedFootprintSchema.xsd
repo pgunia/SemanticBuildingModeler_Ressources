@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
+    elementFormDefault="qualified" attributeFormDefault="unqualified"
+    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    xmlns:smcb_cb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"> 
+    
+    <xs:import
+        namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+        schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+    
+    <xs:element name="classBased">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Classbased footprints are hardcoded Java-Classes which
+                describe at least the footprint-polygon.They can also contain information about the
+                indoor-structure of a building / floor. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="className" type="smcb_ct:avaiableFootprintClasses">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en"> Name of the class which contains the
+                            footprint-description. </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

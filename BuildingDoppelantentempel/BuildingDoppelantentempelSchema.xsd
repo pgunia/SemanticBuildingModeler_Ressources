@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel"
+    xmlns:smcb_budt="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel"
+    xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+    xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+    xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <xs:import
+        namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+        schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+    
+    <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+        schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"/>
+    
+    <xs:import
+        namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+        schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component/ComponentSchema.xsd"/>
+    
+    <xs:import
+        namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+        schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/BuildingSchema.xsd"/>
+    
+    <xs:element name="buildingDoppelantentempel">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Element smcb_contains all necessary information to smcb_construsmcb_ct a
+                smcb_building. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="smcb_bu:dimensions"/>
+                <xs:element ref="smcb_budt:doppelantentempelParameters" />
+                <xs:element ref="smcb_ro:roof"/>
+                <xs:element ref="smcb_budt:buildingComponentsDoppelantentempel" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="buildingComponentsDoppelantentempel">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The Doppelantentempel is a specialized smcb_building which needs a special set of smcb_components to be smcb_construsmcb_cted. This element defines all necessary smcb_building-smcb_component which have to be defined.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="smcb_co:roundstairs" />
+                <xs:element ref="smcb_co:fascia" />
+                <xs:element ref="smcb_co:pillar" />
+                <xs:element ref="smcb_co:edgeaddition" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="doppelantentempelParameters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="architraveHeight" type="smcb_ct:positiveFloat" >
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            Height of the Architrave.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="metopeHeight" type="smcb_ct:positiveFloat">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            Height of the Metope.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="geisonHeight" type="smcb_ct:positiveFloat">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">
+                            Height of the Gleison.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

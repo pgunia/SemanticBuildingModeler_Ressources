@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes">
+    <xs:complexType name="range">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Datatype describes a range from a lower-border-float-value to
+                an upper border float-value. </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="lowerBorder" type="xs:float"/>
+            <xs:element name="upperBorder" type="xs:float" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="rangeOTo1">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Datatype describes a range from a lower-border-float-value to an upper-border-float-value. Both values are within the interval [0,1).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="lowerBorder" type="smcb_ct:floatFrom0To1"/>
+            <xs:element name="upperBorder" type="smcb_ct:floatFrom0To1" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:simpleType name="floatFrom0To1">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Datatype describes float-values from 0.0 to 1.0 inclusively.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Datatype for Vertical-Alignment-Descriptors -->
+    <xs:simpleType name="verticalAlignmentEnum">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Datatype is an enumeration containing all vertical alignment
+                descriptors avaiable within the system. </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TOP"/>
+            <xs:enumeration value="MIDDLE"/>
+            <xs:enumeration value="BOTTOM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="quadDirections">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Datatype is an enumeration containing all possible directions
+                a quad can have within the system. </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FRONT"/>
+            <xs:enumeration value="BACK"/>
+            <xs:enumeration value="LEFT"/>
+            <xs:enumeration value="RIGHT"/>
+            <xs:enumeration value="BOTTOM"/>
+            <xs:enumeration value="TOP"/>
+            <xs:enumeration value="ALL"/>
+            <xs:enumeration value="UNKNOWN"/>
+            <xs:enumeration value="ID"/>
+            <xs:enumeration value="UNDEFINED"/>
+            <xs:enumeration value="SIDE"/>
+            <xs:enumeration value="ROOF"/>
+            <xs:enumeration value="ROOF_SIDE" />
+            <xs:enumeration value="FRONT_INDOOR"/>
+            <xs:enumeration value="BACK_INDOOR"/>
+            <xs:enumeration value="LEFT_INDOOR"/>
+            <xs:enumeration value="RIGHT_INDOOR"/>
+            <xs:enumeration value="BOTTOM_INDOOR"/>
+            <xs:enumeration value="TOP_INDOOR"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:simpleType name="positiveFloat">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Datatype contains Float-Values from 0.0 to infinite.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:attribute name="extern">
+        <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+                <xs:pattern value="http://.*"/>
+                <xs:pattern value="file://.*"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    
+    
+    <xs:element name="vertex">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation xml:lang="en"> Vertexdatatatype describes one single Vertex in 3D-Space
+                    consisting of 3 Floating-Point Coordinates. </xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="x" type="smcb_ct:coordinate"/>
+                <xs:element name="y" type="smcb_ct:coordinate"/>
+                <xs:element name="z" type="smcb_ct:coordinate"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:simpleType name="coordinate">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Coordinate-Datatype one coordinate of a vertex-datatype.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:float">
+            <xs:pattern value="[+-]?[0-9]+\.[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="polygon">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation xml:lang="en"> Polygon-Datatype consists of a minimum Number of 3
+                    Vertices. </xs:documentation>
+            </xs:annotation>
+            <xs:choice>
+                <xs:element ref="smcb_ct:extern" />
+                <xs:sequence minOccurs="3" maxOccurs="unbounded">
+                    <xs:element ref="smcb_ct:vertex"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="extern">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Element stores the location of external ressources either on the local file system or on the internet
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+                <xs:pattern value="http://.*"/>
+                <xs:pattern value="file://.*"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:simpleType name="avaiableFootprintClasses">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> List with the exact Java-classnames of all abaivable
+                Java-footprint-classes. </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RectFootprint"/>
+            <xs:enumeration value="DoppelantentempelFootprint"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="modelFile">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Element describes a 3d-Model-File which is either on the local harddrive or downloadable from a web-ressource.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="smcb_ct:extern"/>
+            <xs:element name="fileFormat" type="smcb_ct:supportedModelFileFormats" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="supportedModelFileFormats">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                List contains all currently supported Model-File-Formats which can be processed by the system.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OBJ" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="supportedModelCategories">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                List contains all currently supported Model-Categorys which can be loaded. Currently only used for Footprint-Creation and thus restricted to these category-types.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Footprint" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="polygonSource">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation xml:lang="en"> Datatype defines the source of a polygon. </xs:documentation>
+            </xs:annotation>
+            <xs:choice>
+                <xs:element name="exampleClass" type="smcb_ct:avaiableFootprintClasses">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en"> Classname of a class describing a footprinttype.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="smcb_ct:polygon"/>
+                <xs:element name="file" type="smcb_ct:modelFile" />
+                <xs:element name="modelCategory" type="smcb_ct:supportedModelCategories" />
+                <xs:element name="reuseFootprint" type="smcb_ct:reuseFootprintEnum" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:simpleType name="floorPositions">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> Enumeration-Datatype describing all potential
+                floor-positions. </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ALL" />
+            <xs:enumeration value="GROUND"/>
+            <xs:enumeration value="INTERMEDIATE"/>
+            <xs:enumeration value="TOP"/>
+            <xs:enumeration value="ROOF" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="reuseFootprintEnum">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                Enum describes which Footprint should be re-used. Currently only the reuse of the FIRST or PREVIOUS Footprint is supported.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FIRST" />
+            <xs:enumeration value="PREVIOUS" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
+

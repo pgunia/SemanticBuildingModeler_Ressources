@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+  xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+  xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+  xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  elementFormDefault="qualified" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor/FloorSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component/ComponentSchema.xsd"/>
+  
+  
+  <xs:element name="building">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Element contains all necessary information to construct a building.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_bu:dimensions"/>
+        <xs:element ref="smcb_ro:roof"/>
+        <xs:element ref="smcb_bu:floors">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Descriptors for the floors the building consists of.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="smcb_bu:buildingComponents" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="floors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_fl:floor" maxOccurs="3"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="buildingComponents">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Element contains all components which are added to the constructed building.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:component" maxOccurs="unbounded">   
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="dimensions">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Element contains all necessary dimensions to construct a building.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="height" type="smcb_ct:range">
+           <xs:annotation>
+             <xs:documentation xml:lang="en">
+                Height of Construction
+             </xs:documentation>
+           </xs:annotation>
+         </xs:element>
+        <xs:element name="length" type="smcb_ct:range">
+           <xs:annotation>
+             <xs:documentation xml:lang="en">
+               Length of Construction
+             </xs:documentation>
+           </xs:annotation>
+         </xs:element>
+        <xs:element name="width" type="smcb_ct:range">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Width of Construction
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="wallThickness" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              Thickness of the walls which are computed by the system.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+    
+  </xs:element>
+</xs:schema>

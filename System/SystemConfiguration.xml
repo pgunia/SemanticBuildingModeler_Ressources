@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/System"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/System SystemSchema.xsd">
+    <applicationWindow>
+        <width>1300</width>
+        <height>1000</height>
+    </applicationWindow>
+    <cityConfiguration>
+        <!-- <configFolder>C:\\Users\Patrick\Dropbox\Promotion\\XML-Konfigurationen</configFolder> -->
+        <configFolder>/Users/Patrick/Dropbox/Promotion/XML-Konfigurationen</configFolder>
+        <configFile>CityExample.xml</configFile>
+    </cityConfiguration>
+    <textures>
+        <supportedTextureCategories>Wall,Roof,Ground,Test</supportedTextureCategories>
+        <maxTextureSize>256</maxTextureSize>
+        <maxTextureScaleFactor>1</maxTextureScaleFactor>
+        
+        <!-- WINDOWS -->
+        <texturePath>C:\\Users\Patrick\Dropbox\Promotion\\Models\\SystemTextures</texturePath>
+    </textures>
+    <importModels>
+        <supportedModelCategories>Window,Door,Pillar_Dorisch,Pillar_Ionisch,Triglyphe,Portal,Moulding_Gotisch,Moulding_Eckstein,Window_Jugendstil,Ledge</supportedModelCategories>
+        
+        <!-- WINDOWS -->
+        <modelPath>C:\\Users\Patrick\Dropbox\Promotion\\Models\\SystemModels</modelPath>
+    </importModels>
+    <exportModels>
+        <!--<exportFolder>"ressource/Export/"</exportFolder>-->
+        <exportFolder>/Users/Patrick/Dropbox/Promotion/</exportFolder>
+        <exportFile>ModelExport2</exportFile>
+    </exportModels>
+</system>

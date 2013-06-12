@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
+  xmlns:smcb_buj="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
+  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+  xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+  xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+  xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+  elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+
+  <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"/>
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component/ComponentSchema.xsd"/>
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/BuildingSchema.xsd"/>
+
+  <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/FloorSchema.xsd"/>
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/ObjectplacementSchema.xsd"/>
+
+
+  <xs:element name="buildingJugendstil">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Element contains all necessary information to construct a
+        building. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_bu:dimensions"/>
+        <xs:element ref="smcb_buj:floorHeights"/>
+        <xs:element ref="smcb_ro:roof"/>
+        <xs:element ref="smcb_bu:buildingComponents"/>
+        <xs:element ref="smcb_buj:jugendstilProbabilities"/>
+        <xs:element ref="smcb_buj:objectplacementConfiguration"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="floorHeights">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> JugendstilBuildings don´t accept floor-definitions as other
+        buildings do, because their construction follows a fixed construction plan. This is why the
+        user has to provide floor-heights in this element. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation xml:lang="en"> Floor-Heights have to be provided for all three floor-types
+          (GROUND, INTERMEDIATE, TOP). </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="floorHeight" type="smcb_buj:floorHeight" minOccurs="3" maxOccurs="3"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="floorHeight">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Type describes the height of type of floor (e.g. GROUND or
+        INTERMEDIATE). </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="position" type="smcb_ct:floorPositions"/>
+      <xs:element name="height" type="smcb_ct:range"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="jugendstilProbabilities">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:documentation xml:lang="en"> Jugendstil-Buildings are constructed using a fixed sequence
+          of algorithmic-footprint-modifications. The system uses the Objectplacement-algorithm to
+          modify input-footprints. This behaviour is fixed, though it is possible to provide values
+          which describe probabilities wether or not a particular footprint is modified or reused on
+          other floors. </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element name="modifyGroundFootprintProbability" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Standard-Footprint for Jugendstil-Buildings is a
+              rectangle. This value describes the possibility that this rectangle is modified by the
+              objectplacement-algorithm to generate a Ground-Footprint. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="modifyIntermediateFootprintProbability" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Probability that the Ground-Footprint is modified and
+              used as Intermediate-Footprint. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="modifyTopFootprintProbability" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Probability that the Intermediate-Footprint is modified
+              and used as Top-Footprint. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="useGroundFloorFootprintForTopFloorProbability" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> This value describes wether or not to reuse the
+              Ground-Footprint for the Top-floor. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="objectplacementConfiguration">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> This element contains the configuration-file which is used to
+        control the objectplacement-algorithm for footprint-modification. It can be either defined
+        directly within the same file or loaded from an external ressouce. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="smcb_ct:extern"/>
+        <xs:element ref="smcb_op:objectplacement"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

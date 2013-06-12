@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/City"
+  xmlns:smcb_ci="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/City"
+  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  xmlns:smcb_fp="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+  xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+  xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+  xmlns:smcb_xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+  xmlns:smcb_buj="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
+  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+  xmlns:smcb_budt="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel"
+  elementFormDefault="qualified">
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/BuildingSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil/BuildingJugendstilSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel/BuildingDoppelantentempelSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component/ComponentSchema.xsd"/>
+  <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/FloorSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint/FootprintSchema.xsd"/>
+  <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"/>
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+  <xs:element name="city">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_ci:buildingDescriptor" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="buildingDescriptor">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> This element contains all necessary information to construct
+        a city based on a number of different building specifications. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="count" type="xs:positiveInteger">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Number of buildings which are constructed based on the
+              given building description. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:choice>
+          <xs:choice>
+            <xs:element ref="smcb_bu:building"/>
+            <xs:element ref="smcb_buj:buildingJugendstil"/>
+            <xs:element ref="smcb_budt:buildingDoppelantentempel"/>
+          </xs:choice>
+          <xs:sequence>
+            <xs:element name="buildingType" type="smcb_ci:class"/>
+            <xs:element ref="smcb_ct:extern"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="class">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ArbitraryBuilding"/>
+      <xs:enumeration value="JugendstilBuilding"/>
+      <xs:enumeration value="Doppelantentempel"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

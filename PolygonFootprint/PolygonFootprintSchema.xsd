@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
+        elementFormDefault="qualified" attributeFormDefault="unqualified"
+        xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+        xmlns:smcb_pb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"> 
+        
+        <xs:import
+            namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+            schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+        
+        <xs:element name="polygonBased">
+            <xs:annotation>
+                <xs:documentation xml:lang="en"> Polygon-based footprints are loaded from 3d-Model-Files </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="modelSource" type="smcb_ct:modelFile" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+  elementFormDefault="qualified">
+
+  <xs:import
+    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+
+  <!-- Component-Base-Descriptor -->
+  <xs:element name="component">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Building-Components can either be defined directly within a
+        local or external XML-configuration. If an external ressources is used, the system first
+        loads the ressource and afterwards integrates it into the processed XML-configuration.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="smcb_ct:extern">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Definition is loaded from an external XML-ressource.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="smcb_co:fascia"/>
+        <xs:element ref="smcb_co:door"/>
+        <xs:element ref="smcb_co:window"/>
+        <xs:element ref="smcb_co:windowLedge"/>
+        <xs:element ref="smcb_co:moulding"/>
+        <xs:element ref="smcb_co:pillar"/>
+        <xs:element ref="smcb_co:roundstairs"/>
+        <xs:element ref="smcb_co:edgeaddition"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="componentModelSource">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="modelCategory" type="smcb_co:modelPrefix">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> The model is randomly chosen from all models provided
+              within the given category. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="smcb_ct:extern">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> The model is loaded from a local or distant location
+              and afterwards imported into the system. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+
+  </xs:element>
+
+  <xs:complexType name="comp">
+    <xs:choice>
+      <xs:element ref="smcb_co:door"/>
+      <xs:element ref="smcb_co:fascia"/>
+      <xs:element ref="smcb_co:moulding"/>
+      <xs:element ref="smcb_co:pillar"/>
+      <xs:element ref="smcb_co:window"/>
+      <xs:element ref="smcb_co:edgeaddition" />
+      <xs:element name="ledge"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <!-- Component-Type -->
+  <xs:simpleType name="componentType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Currently allowed types of components the system is able to
+        deal with. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="door"/>
+      <xs:enumeration value="window"/>
+      <xs:enumeration value="ledge"/>
+      <xs:enumeration value="moulding"/>
+      <xs:enumeration value="pillar"/>
+      <xs:enumeration value="fascia"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Model-Prefixes -->
+  <xs:simpleType name="modelPrefix">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Currently allowed prefixes of model-files which can be loaded
+        into the system. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Window"/>
+      <xs:enumeration value="Door"/>
+      <xs:enumeration value="Pillar_Dorisch"/>
+      <xs:enumeration value="Pillar_Ionisch"/>
+      <xs:enumeration value="Triglyphe"/>
+      <xs:enumeration value="Portal"/>
+      <xs:enumeration value="Moulding_Gotisch"/>
+      <xs:enumeration value="Moulding_Eckstein"/>
+      <xs:enumeration value="Window_Jugendstil"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Door-Components -->
+  <xs:element name="door">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource"/>
+        <xs:element name="distanceToCornerRatio" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Proportion of the total length of the target quad.
+              Describes the minimum distance of a door-model from a corner of the building.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="doorToTargetQuadRatio" type="smcb_ct:range">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Ratio of the door-dimensions to the dimensions of the
+              quad in which the door is positioned. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Fascia-Components -->
+  <xs:element name="fascia">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This configuration-object contains all necessary information to construct a fascia for a given set of building-floors.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> 3D-File from where the profile is loaded which is used
+              to construct the Fascia. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="smcb_co:mouldingHeightRatio"/>
+        <xs:element ref="smcb_co:targetFloors"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Moulding-Component -->
+  <xs:element name="moulding">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This configuration-object contains all necessary information to construct a moulding for a given set of wall-elements.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource"/>
+        <xs:element name="verticalAlignment" type="smcb_ct:verticalAlignmentEnum">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Vertical position of the moulding with respect to the
+              target quad. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="smcb_co:mouldingHeightRatio"/>
+        <xs:element ref="smcb_co:targetFloors"/>
+        <xs:element ref="smcb_co:targetWalls"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="targetWalls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="direction" type="smcb_ct:quadDirections" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Direction of all target quads a component should be applied.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="targetFloors">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> This element describes, on which floors a component should be
+        applied. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="floorPosition" type="smcb_ct:floorPositions" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mouldingHeightRatio" type="smcb_ct:floatFrom0To1">
+    <xs:annotation>
+      <xs:documentation> Ratio between Moulding- and Quadheight. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <!-- Pillar-Component-Type -->
+  <xs:element name="pillar">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This configuration-object contains all necessary information to pillars of a given type to a given building-floor.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource"/>
+        <xs:choice>
+          <xs:element name="pillarDistanceRatio" type="smcb_ct:floatFrom0To1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en"> Minimum distance between two pillars as proportion of
+                the total length of the target edge. </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:sequence>
+            <xs:element name="numberOfPillarsLongside" type="xs:positiveInteger">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">
+                  Element describes the number of pillars which are positioned on the longside of a rectangular footprint.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="numberOfPillarsBroadside" type="xs:positiveInteger">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">
+                  Element describes the number of pillars which are positioned on the broadside of a rectangular footprint.
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element name="pillarFloorPosition" type="smcb_ct:floorPositions">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Element defines the floor in which pillars are
+              positioned by the system. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="pillarType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Enumeration contains all types of Pillars which are currently
+        supported by the system. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Dorisch"/>
+      <xs:enumeration value="Ionisch"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Window-Component-Type -->
+  <xs:element name="window">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This configuration-object contains all necessary information to add windows of a given type to a building.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource"/>
+        <xs:element name="translationRatioForWindows" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Proportion of the total height of the target quad which
+              is used to move the window towards the quads lower base edge. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="minDistanceBetweenWindowsRatio" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              <xs:annotation> Proportion of the total width of the target quad which is used as a
+                minimal disctance between two positioned windows. </xs:annotation>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="windowToTargetQuadRatio" type="smcb_ct:range">
+          <xs:annotation>
+            <xs:documentation> Proportion of the total height of the target quad which is allowed as
+              maximum height for the positioned window. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Window-Ledge-Component -->
+  <xs:element name="windowLedge">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Element contains all necessary information to construct
+        window ledges. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource"/>
+        <xs:element name="ledgeToTargetQuadRatio" type="smcb_ct:floatFrom0To1">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Proportion of the ledge height compared to the total
+              height of the target quad. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Edge-Addition-Components -->
+  <xs:element name="edgeaddition">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This configuration-object contains all necessary information to add profile-based additions to all edges of a given quad.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="smcb_co:componentModelSource">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> 3D-File from where the profile is loaded which is used
+              to construct the Fascia. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element ref="smcb_co:edgeAdditionHeightRatio"/>
+        <xs:element ref="smcb_co:targetFloors"/>
+        <xs:element ref="smcb_co:targetWalls"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="edgeAdditionHeightRatio" type="smcb_ct:floatFrom0To1">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"> Defines the size of the rescaled edgeaddition-profile as
+        proportion of the target quad-height. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <!-- Round-Stairs-Component-Type -->
+  <xs:element name="roundstairs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        This configuration-object contains all necessary information to construct a stair-component which has the same footprint as the building the stairs lead to. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="stairWidth" minOccurs="0" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Width of the rectangular footprint from which the steps
+              are constructed. (optional) </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="stairLength" minOccurs="0" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Length of the rectangular footprint from which the
+              steps are constructed. (optional) </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="numberOfSteps" type="xs:positiveInteger">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Number of steps the stair consists of.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="stepHeight" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Height of a single step. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="stepWidth" type="smcb_ct:positiveFloat">
+          <xs:annotation>
+            <xs:documentation xml:lang="en"> Width of a single step. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
