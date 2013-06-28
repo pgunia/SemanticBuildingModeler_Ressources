@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
-  xmlns:smcb_buj="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
-  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-  xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-  xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-  xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
-  xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/BuildingJugendstil"
+  xmlns:smcb_buj="http://raw.github.com/pgunia/SemanticCityBuilder/master/BuildingJugendstil"
+  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
+  xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building"
+  xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+  xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor"
+  xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
   elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
 
-  <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"/>
-
-  <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component/ComponentSchema.xsd"/>
+  <xs:import namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof/RoofSchema.xsd"/>
 
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/BuildingSchema.xsd"/>
-
-  <xs:import namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/FloorSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component/ComponentSchema.xsd"/>
 
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/ObjectplacementSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building/BuildingSchema.xsd"/>
+
+  <xs:import namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building/FloorSchema.xsd"/>
+
+  <xs:import
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building/ObjectplacementSchema.xsd"/>
 
 
   <xs:element name="buildingJugendstil">

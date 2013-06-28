@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+    targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"> 
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+    xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"> 
     
     <xs:import
-        namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-        schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+        namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+        schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
     
     <xs:element name="objectplacement">
         <xs:annotation>

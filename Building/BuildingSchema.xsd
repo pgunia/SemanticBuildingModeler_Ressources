@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-  xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
-  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-  xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-  xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building"
+  xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor"
+  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
+  xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building"
+  xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
   elementFormDefault="qualified" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof/RoofSchema.xsd"/>
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor/FloorSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor/FloorSchema.xsd"/>
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component/ComponentSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component/ComponentSchema.xsd"/>
   
   
   <xs:element name="building">

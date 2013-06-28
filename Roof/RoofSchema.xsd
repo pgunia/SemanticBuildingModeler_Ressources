@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-  xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof">
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof">
 
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
     schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/%7Epgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
 
   <xs:element name="roof">

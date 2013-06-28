@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
+        targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/PolygonFootprint"
         elementFormDefault="qualified" attributeFormDefault="unqualified"
-        xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-        xmlns:smcb_pb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"> 
+        xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+        xmlns:smcb_pb="http://raw.github.com/pgunia/SemanticCityBuilder/master/PolygonFootprint"> 
         
         <xs:import
-            namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-            schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+            namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+            schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
         
         <xs:element name="polygonBased">
             <xs:annotation>

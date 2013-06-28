@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes">
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+    targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes">
     <xs:complexType name="range">
         <xs:annotation>
             <xs:documentation xml:lang="en"> Datatype describes a range from a lower-border-float-value to

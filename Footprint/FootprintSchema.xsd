@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-  xmlns:smcb_fp="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
-  xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-  xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-  xmlns:smcb_cb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
-  xmlns:smcb_pb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
-  targetNamespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+  xmlns:smcb_fp="http://raw.github.com/pgunia/SemanticCityBuilder/master/Footprint"
+  xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
+  xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/ExampleBasedSynthesis"
+  xmlns:smcb_cb="http://raw.github.com/pgunia/SemanticCityBuilder/master/ClassBasedFootprint"
+  xmlns:smcb_pb="http://raw.github.com/pgunia/SemanticCityBuilder/master/PolygonFootprint"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Footprint"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
 
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement/ObjectplacementSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement/ObjectplacementSchema.xsd"/>
   
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/ExampleBasedSynthesis"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd"/>
   
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint/ClassBasedFootprintSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/ClassBasedFootprint"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/ClassBasedFootprint/ClassBasedFootprintSchema.xsd"/>
   
   <xs:import
-    namespace="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint/PolygonFootprintSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/PolygonFootprint"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/PolygonFootprint/PolygonFootprintSchema.xsd"/>
   
   
   <!--  ############################## Footprint-Declaration ############################## -->
