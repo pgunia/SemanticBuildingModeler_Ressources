@@ -33,19 +33,19 @@
     </buildingDescriptor>
   
     <buildingDescriptor>
-        <smcb_ci:count>20</smcb_ci:count>
+        <smcb_ci:count>1</smcb_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
         <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant0.xml</smcb_ct:extern>
     </buildingDescriptor>
 
      <buildingDescriptor>
-        <smcb_ci:count>20</smcb_ci:count>
+        <smcb_ci:count>1</smcb_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
         <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant1.xml</smcb_ct:extern>
     </buildingDescriptor>
 
      <buildingDescriptor>
-        <smcb_ci:count>20</smcb_ci:count>
+        <smcb_ci:count>1</smcb_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
         <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant2.xml</smcb_ct:extern>
     </buildingDescriptor>
