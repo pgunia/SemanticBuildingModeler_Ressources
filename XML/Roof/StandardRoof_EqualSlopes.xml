@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<roof xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof 
+    http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"
+    xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes">
+    <roofDescriptor>
+        <roofSlopeMain>
+            <lowerBorder>1.0</lowerBorder>
+        </roofSlopeMain>
+        <roofSlopeSide>
+            <lowerBorder>1.0</lowerBorder>
+        </roofSlopeSide>
+        <roofScaling>1.02</roofScaling>
+        <equalWeightForRoofSides>0.0</equalWeightForRoofSides>
+    </roofDescriptor>
+</roof>

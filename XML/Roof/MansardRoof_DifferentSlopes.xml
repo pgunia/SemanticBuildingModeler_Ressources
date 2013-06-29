@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<roof xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof 
+    http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"
+    xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes">
+    <roofDescriptorMansardRoof>
+        <roofScaling>1.05</roofScaling>
+        <roofFirstSlopeSide>
+            <lowerBorder>1.3</lowerBorder>
+            <upperBorder>1.4</upperBorder>
+        </roofFirstSlopeSide>
+        <roofSecondSlopeSide>
+            <lowerBorder>0.9</lowerBorder>
+            <upperBorder>1.0</upperBorder>
+        </roofSecondSlopeSide>
+        <roofFirstSlopeMain>
+            <lowerBorder>1.3</lowerBorder>
+            <upperBorder>1.4</upperBorder>
+        </roofFirstSlopeMain>
+        <roofSecondSlopeMain>
+            <lowerBorder>0.9</lowerBorder>
+            <upperBorder>1.0</upperBorder>
+        </roofSecondSlopeMain>
+        <slopeChangeHeight>30</slopeChangeHeight>
+    </roofDescriptorMansardRoof>
+</roof>

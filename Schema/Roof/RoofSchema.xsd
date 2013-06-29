@@ -6,7 +6,7 @@
 
   <xs:import
     namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-    schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/%7Epgunia/SchemaDocuments/CommonTypes/CommonTypes.xsd"/>
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
 
   <xs:element name="roof">
     <xs:annotation>

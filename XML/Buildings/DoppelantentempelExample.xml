@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<buildingDoppelantentempel 
+ xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
+ xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
+ xmlns:smcb_cb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
+ xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel"
+ xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
+ xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+ xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:smcb_fp="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+ xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+ xmlns:smcb_pb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
+ xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
+ xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingDoppelantentempel/BuildingDoppelantentempelSchema.xsd">
+    <smcb_bu:dimensions>
+        <smcb_bu:height>
+            <smcb_ct:lowerBorder>150</smcb_ct:lowerBorder>
+        </smcb_bu:height>
+        <smcb_bu:length>
+            <smcb_ct:lowerBorder>1000</smcb_ct:lowerBorder>
+        </smcb_bu:length>
+        <smcb_bu:width>
+            <smcb_ct:lowerBorder>700</smcb_ct:lowerBorder>
+        </smcb_bu:width>
+        <smcb_bu:wallThickness>5</smcb_bu:wallThickness>
+    </smcb_bu:dimensions>
+    <doppelantentempelParameters>
+        <architraveHeight>20</architraveHeight>
+        <metopeHeight>15</metopeHeight>
+        <geisonHeight>15</geisonHeight>
+    </doppelantentempelParameters>
+    <smcb_ro:roof>
+        <smcb_ro:roofDescriptor>
+            <smcb_ro:roofSlopeMain>
+                <smcb_ro:lowerBorder>0.25</smcb_ro:lowerBorder>
+            </smcb_ro:roofSlopeMain>
+            <smcb_ro:roofSlopeSide>
+                <smcb_ro:lowerBorder>1.56</smcb_ro:lowerBorder>
+            </smcb_ro:roofSlopeSide>
+            <smcb_ro:roofScaling>1.0</smcb_ro:roofScaling>
+            <smcb_ro:equalWeightForRoofSides>0.0</smcb_ro:equalWeightForRoofSides>
+        </smcb_ro:roofDescriptor>
+    </smcb_ro:roof>
+    <buildingComponentsDoppelantentempel>
+        <smcb_co:roundstairs>
+            <smcb_co:numberOfSteps>4</smcb_co:numberOfSteps>
+            <smcb_co:stepHeight>7</smcb_co:stepHeight>
+            <smcb_co:stepWidth>150</smcb_co:stepWidth>
+        </smcb_co:roundstairs>
+        <smcb_co:fascia>
+            <smcb_co:componentModelSource>
+                <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
+            </smcb_co:componentModelSource>
+            <smcb_co:mouldingHeightRatio>0.6</smcb_co:mouldingHeightRatio>
+            <smcb_co:targetFloors>
+                <smcb_co:floorPosition>ALL</smcb_co:floorPosition>
+            </smcb_co:targetFloors>
+        </smcb_co:fascia>
+        <smcb_co:pillar>
+            <smcb_co:componentModelSource>
+                <smcb_co:modelCategory>Pillar_Dorisch</smcb_co:modelCategory>
+            </smcb_co:componentModelSource>
+            
+            <smcb_co:numberOfPillarsLongside>14</smcb_co:numberOfPillarsLongside>
+            <smcb_co:numberOfPillarsBroadside>6</smcb_co:numberOfPillarsBroadside>
+            
+            <!--<smcb_co:pillarDistanceRatio>0.1</smcb_co:pillarDistanceRatio>-->
+            <smcb_co:pillarFloorPosition>GROUND</smcb_co:pillarFloorPosition>
+        </smcb_co:pillar>
+        <smcb_co:edgeaddition>
+            <smcb_co:componentModelSource>
+                <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
+            </smcb_co:componentModelSource>
+            <smcb_co:edgeAdditionHeightRatio>0.05</smcb_co:edgeAdditionHeightRatio>
+            <smcb_co:targetFloors>
+                <smcb_co:floorPosition>ROOF</smcb_co:floorPosition>
+            </smcb_co:targetFloors>
+            <smcb_co:targetWalls>
+                <smcb_co:direction>ROOF_SIDE</smcb_co:direction>
+            </smcb_co:targetWalls>
+        </smcb_co:edgeaddition>
+    </buildingComponentsDoppelantentempel>
+</buildingDoppelantentempel>
