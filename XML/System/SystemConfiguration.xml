@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/System"
+ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/System/SystemSchema.xsd">
+    <applicationWindow>
+        <width>1000</width>
+        <height>700</height>
+    </applicationWindow>
+    <cityConfiguration>
+        <configFolder>C:\\Users\Patrick\Dropbox\Promotion\\XML-Konfigurationen</configFolder>
+        <configFile>CityExample.xml</configFile>
+    </cityConfiguration>
+    <textures>
+        <supportedTextureCategories>Wall,Roof,Ground,Test</supportedTextureCategories>
+        <maxTextureSize>256</maxTextureSize>
+        <maxTextureScaleFactor>1</maxTextureScaleFactor>
+        <texturePath>ressource/Textures</texturePath>
+    </textures>
+    <importModels>
+        <supportedModelCategories>Window,Door,Pillar_Dorisch,Pillar_Ionisch,Triglyphe,Portal,Moulding_Gotisch,Moulding_Eckstein,Window_Jugendstil,Ledge</supportedModelCategories>
+        <modelPath>ressource/Models</modelPath>
+    </importModels>
+</system>
