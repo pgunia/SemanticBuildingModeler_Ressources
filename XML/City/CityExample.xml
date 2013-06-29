@@ -13,13 +13,16 @@
     xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
     xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City 
  https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City/CitySchema.xsd">
-<!--
+
+    <!-- DOPPELANTENTEMPEL EXAMPLE -->
     <buildingDescriptor>
         <smcb_ci:count>1</smcb_ci:count>
         <buildingType>Doppelantentempel</buildingType>
         <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/DoppelantentempelExample.xml</smcb_ct:extern>
     </buildingDescriptor>
--->  
+ 
+
+    <!-- JUGENDSTIL BUILDING EXAMPLE -->
     <buildingDescriptor>
         <smcb_ci:count>1</smcb_ci:count>
         <buildingType>JugendstilBuilding</buildingType>
@@ -32,6 +35,8 @@
         <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/BuildingJugendstil_Variant1.xml</smcb_ct:extern>
     </buildingDescriptor>
   
+
+    <!-- ARBITRARY BUILDING EXAMPLES -->
     <buildingDescriptor>
         <smcb_ci:count>1</smcb_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
