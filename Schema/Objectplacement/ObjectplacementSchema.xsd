@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"> 
+    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"> 
     
     <xs:import
-        namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
     
     <xs:element name="objectplacement">
         <xs:annotation>

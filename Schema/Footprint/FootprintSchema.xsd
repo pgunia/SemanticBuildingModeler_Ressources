@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-  xmlns:smcb_fp="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-  xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-  xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-  xmlns:smcb_cb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
-  xmlns:smcb_pb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
-  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema"
+  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+  xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+  xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+  xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+  xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+  xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
+  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement/ObjectplacementSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement/ObjectplacementSchema.xsd"/>
   
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd"/>
   
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint/ClassBasedFootprintSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint/ClassBasedFootprintSchema.xsd"/>
   
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint/PolygonFootprintSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
+    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint/PolygonFootprintSchema.xsd"/>
   
   
   <!--  ############################## Footprint-Declaration ############################## -->

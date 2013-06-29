@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<footprint xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint/FootprintSchema.xsd"
+<footprint xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint/FootprintSchema.xsd"
     src="exampleBased">
     <smcb_eb:exampleBased>
         <smcb_ct:polygonSource>

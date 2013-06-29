@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"> 
+    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"> 
     
     <xs:import
-        namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
     
     <xs:element name="exampleBased">
         <xs:annotation>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <buildingJugendstil
-    xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil 
-    http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-    xmlns:smcb_cb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
-    xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    xmlns:smcb_fp="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    xmlns:smcb_pb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
-    xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor">
+    xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
+    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil 
+    https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+    xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+    xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
+    xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+    xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
+    xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor">
     <smcb_bu:dimensions>
         <smcb_bu:height>
             <smcb_ct:lowerBorder>100</smcb_ct:lowerBorder>
