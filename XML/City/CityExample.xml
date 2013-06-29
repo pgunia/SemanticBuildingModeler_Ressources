@@ -13,242 +13,40 @@
     xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
     xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City 
  https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City/CitySchema.xsd">
-    <!--
-    <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
-        <smcb_bu:building>
-            <smcb_bu:dimensions>
-                <smcb_bu:width>
-                    <smcb_ct:lowerBorder>120.0</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>180.0</smcb_ct:upperBorder>
-                </smcb_bu:width>
-                <smcb_bu:height>
-                    <smcb_ct:lowerBorder>295.0</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>370.0</smcb_ct:upperBorder>
-                </smcb_bu:height>
-                <smcb_bu:length>
-                    <smcb_ct:lowerBorder>75.0</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>95.0</smcb_ct:upperBorder>
-                </smcb_bu:length>
-                <smcb_bu:wallThickness>3.0</smcb_bu:wallThickness>
-            </smcb_bu:dimensions>
-            <smcb_ro:roof>
-                <smcb_ro:roofDescriptor>
-                    <smcb_ro:roofSlopeMain>
-                        <smcb_ro:lowerBorder>0.8</smcb_ro:lowerBorder>
-                        <smcb_ro:upperBorder>0.8</smcb_ro:upperBorder>
-                    </smcb_ro:roofSlopeMain>
-                    <smcb_ro:roofSlopeSide>
-                        <smcb_ro:lowerBorder>1.57</smcb_ro:lowerBorder>
-                        <smcb_ro:upperBorder>1.57</smcb_ro:upperBorder>
-                    </smcb_ro:roofSlopeSide>
-                    <smcb_ro:roofScaling>1.0</smcb_ro:roofScaling>
-                    <smcb_ro:equalWeightForRoofSides>0.5</smcb_ro:equalWeightForRoofSides>
-                </smcb_ro:roofDescriptor>
-            </smcb_ro:roof>
-            <smcb_bu:floors>
-
-                <smcb_fl:floor>
-                    <smcb_fl:floorposition>INTERMEDIATE</smcb_fl:floorposition>
-                    <smcb_fp:footprint src="class">
-                        <smcb_cb:classBased>
-                            <smcb_cb:className>RectFootprint</smcb_cb:className>
-                        </smcb_cb:classBased>
-                    </smcb_fp:footprint>
-                    <smcb_fl:floorHeight>
-                        <smcb_ct:lowerBorder>70.0</smcb_ct:lowerBorder>
-                    </smcb_fl:floorHeight>
-                </smcb_fl:floor>
-
-                <smcb_fl:floor>
-                    <smcb_fl:floorposition>TOP</smcb_fl:floorposition>
-                    <smcb_fp:footprint src="exampleBased">
-                        <smcb_eb:exampleBased>
-                            <smcb_ct:polygonSource>
-                                <smcb_ct:exampleClass>RectFootprint</smcb_ct:exampleClass>
-                            </smcb_ct:polygonSource>
-                            <smcb_eb:firstComponentType>INSIDE</smcb_eb:firstComponentType>
-                            <smcb_eb:cornerCount>1</smcb_eb:cornerCount>
-                            <smcb_eb:reflexCornerCount>1</smcb_eb:reflexCornerCount>
-                            <smcb_eb:edgeCount>-1</smcb_eb:edgeCount>
-                            <smcb_eb:insideCount>-1</smcb_eb:insideCount>
-                            <smcb_eb:outsideCount>-1</smcb_eb:outsideCount>
-                            <smcb_eb:randomComponentChoice>true</smcb_eb:randomComponentChoice>
-                            <smcb_eb:randomStateChoice>true</smcb_eb:randomStateChoice>
-                            <smcb_eb:consistencyConstraint>true</smcb_eb:consistencyConstraint>
-                            <smcb_eb:onlyRayComponents>false</smcb_eb:onlyRayComponents>
-                            <smcb_eb:onlyVertexComponents>false</smcb_eb:onlyVertexComponents>
-                            <smcb_eb:cornerVoteBoost>8</smcb_eb:cornerVoteBoost>
-                            <smcb_eb:reflexCornerVoteBoost>6</smcb_eb:reflexCornerVoteBoost>
-                            <smcb_eb:edgeVoteBoost>1</smcb_eb:edgeVoteBoost>
-                            <smcb_eb:outsideVoteBoost>1</smcb_eb:outsideVoteBoost>
-                            <smcb_eb:insideVoteBoost>1</smcb_eb:insideVoteBoost>
-                            <smcb_eb:numberOfParallelRays>8</smcb_eb:numberOfParallelRays>
-                            <smcb_eb:parallelRayDistance>157.23</smcb_eb:parallelRayDistance>
-                            <smcb_eb:parallelRayDistanceRuleComputation>17.93</smcb_eb:parallelRayDistanceRuleComputation>
-                            <smcb_eb:randomGrowth>false</smcb_eb:randomGrowth>
-                        </smcb_eb:exampleBased>
-                    </smcb_fp:footprint>
-                    <smcb_fl:floorHeight>
-                        <smcb_ct:lowerBorder>20</smcb_ct:lowerBorder>
-                    </smcb_fl:floorHeight>
-                </smcb_fl:floor>
-
-            </smcb_bu:floors>
-
-            <smcb_bu:buildingComponents>
-                <smcb_co:component>
-                    <smcb_co:window>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Window</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:translationRatioForWindows>0.4</smcb_co:translationRatioForWindows>
-                        <smcb_co:minDistanceBetweenWindowsRatio>0.01</smcb_co:minDistanceBetweenWindowsRatio>
-                        <smcb_co:windowToTargetQuadRatio>
-                            <smcb_ct:lowerBorder>0.3</smcb_ct:lowerBorder>
-                            <smcb_ct:upperBorder>0.5</smcb_ct:upperBorder>
-                        </smcb_co:windowToTargetQuadRatio>
-                    </smcb_co:window>
-                </smcb_co:component>
-                <smcb_co:component>
-                    <smcb_co:door>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Door</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:distanceToCornerRatio>0.1</smcb_co:distanceToCornerRatio>
-                        <smcb_co:doorToTargetQuadRatio>
-                            <smcb_ct:lowerBorder>0.5</smcb_ct:lowerBorder>
-                        </smcb_co:doorToTargetQuadRatio>
-                    </smcb_co:door>
-                </smcb_co:component>
-                <smcb_co:component>
-                    <smcb_co:moulding>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Moulding_Gotisch</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:verticalAlignment>TOP</smcb_co:verticalAlignment>
-                        <smcb_co:mouldingHeightRatio>0.1</smcb_co:mouldingHeightRatio>
-                        <smcb_co:targetFloors>
-                            <smcb_co:floorPosition>TOP</smcb_co:floorPosition>
-                        </smcb_co:targetFloors>
-                        <smcb_co:targetWalls>
-                            <smcb_co:direction>ALL</smcb_co:direction>
-                        </smcb_co:targetWalls>
-                    </smcb_co:moulding>
-                </smcb_co:component>
-                <smcb_co:component>
-                    <smcb_co:windowLedge>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:ledgeToTargetQuadRatio>0.1</smcb_co:ledgeToTargetQuadRatio>
-                    </smcb_co:windowLedge>
-                </smcb_co:component>
-            </smcb_bu:buildingComponents>
-
-        </smcb_bu:building>
-    </buildingDescriptor>
-    -->
-    <!--
-    <buildingDescriptor>
-        <smcb_ci:count>20</smcb_ci:count>
-        <buildingType>ArbitraryBuilding</buildingType>
-        <smcb_ct:extern>https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant2.xml</smcb_ct:extern>
-    </buildingDescriptor>
-    -->
-    
+<!--
     <buildingDescriptor>
         <smcb_ci:count>1</smcb_ci:count>
         <buildingType>Doppelantentempel</buildingType>
-        <smcb_ct:extern>https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/Buildings/DoppelantentempelExample.xml</smcb_ct:extern>
+        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/DoppelantentempelExample.xml</smcb_ct:extern>
     </buildingDescriptor>
-    
-    <!-- Rechteckiges Gebaeude mit Mansardendach -->
-    <!--
+-->  
     <buildingDescriptor>
-        <smcb_ci:count>2</smcb_ci:count>
-        <smcb_bu:building>
-            <smcb_bu:dimensions>
-                <smcb_bu:width>
-                    <smcb_ct:lowerBorder>120.0</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>180.0</smcb_ct:upperBorder>
-                </smcb_bu:width>
-                <smcb_bu:height>
-                    <smcb_ct:lowerBorder>250.0</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>370.0</smcb_ct:upperBorder>
-                </smcb_bu:height>
-                <smcb_bu:length>
-                    <smcb_ct:lowerBorder>75.0</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>95.0</smcb_ct:upperBorder>
-                </smcb_bu:length>
-                <smcb_bu:wallThickness>3.0</smcb_bu:wallThickness>
-            </smcb_bu:dimensions>
-            <smcb_ro:roof>
-                <smcb_ro:roofDescriptorMansardRoof>
-                    <smcb_ro:roofFirstSlopeMain>
-                        <smcb_ro:lowerBorder>1.3</smcb_ro:lowerBorder>
-                    </smcb_ro:roofFirstSlopeMain>
-                    <smcb_ro:roofSecondSlopeMain>
-                        <smcb_ro:lowerBorder>0.85</smcb_ro:lowerBorder>
-                    </smcb_ro:roofSecondSlopeMain>
-                    <smcb_ro:roofFirstSlopeSide>
-                        <smcb_ro:lowerBorder>1.3</smcb_ro:lowerBorder>
-                    </smcb_ro:roofFirstSlopeSide>
-                    <smcb_ro:roofSecondSlopeSide>
-                        <smcb_ro:lowerBorder>0.85</smcb_ro:lowerBorder>
-                    </smcb_ro:roofSecondSlopeSide>
-                    <smcb_ro:roofScaling>1.0</smcb_ro:roofScaling>
-                    <smcb_ro:slopeChangeHeight>40</smcb_ro:slopeChangeHeight>
-                </smcb_ro:roofDescriptorMansardRoof>
-            </smcb_ro:roof>
-            <smcb_bu:floors>
-                <smcb_fl:floor>
-                    <smcb_fl:floorposition>ALL</smcb_fl:floorposition>
-                    <smcb_fp:footprint src="objectplacement">
-                        <smcb_ct:extern>https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/FootprintPlacement.xml</smcb_ct:extern>
-                    </smcb_fp:footprint>
-                    
-                    <smcb_fl:floorHeight>
-                        <smcb_ct:lowerBorder>70.0</smcb_ct:lowerBorder>
-                        <smcb_ct:upperBorder>100.0</smcb_ct:upperBorder>
-                    </smcb_fl:floorHeight>
-                </smcb_fl:floor>
-            </smcb_bu:floors>
-            <smcb_bu:buildingComponents>
-                <smcb_co:component>
-                    <smcb_co:window>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Window</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:translationRatioForWindows>0.4</smcb_co:translationRatioForWindows>
-                        <smcb_co:minDistanceBetweenWindowsRatio>0.01</smcb_co:minDistanceBetweenWindowsRatio>
-                        <smcb_co:windowToTargetQuadRatio>
-                            <smcb_ct:lowerBorder>0.3</smcb_ct:lowerBorder>
-                            <smcb_ct:upperBorder>0.5</smcb_ct:upperBorder>
-                        </smcb_co:windowToTargetQuadRatio>
-                    </smcb_co:window>
-                </smcb_co:component>
-                <smcb_co:component>
-                    <smcb_co:door>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Door</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:distanceToCornerRatio>0.1</smcb_co:distanceToCornerRatio>
-                        <smcb_co:doorToTargetQuadRatio>
-                            <smcb_ct:lowerBorder>0.5</smcb_ct:lowerBorder>
-                        </smcb_co:doorToTargetQuadRatio>
-                    </smcb_co:door>
-                </smcb_co:component>
-                <smcb_co:component>
-                    <smcb_co:windowLedge>
-                        <smcb_co:componentModelSource>
-                            <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
-                        </smcb_co:componentModelSource>
-                        <smcb_co:ledgeToTargetQuadRatio>0.1</smcb_co:ledgeToTargetQuadRatio>
-                    </smcb_co:windowLedge>
-                </smcb_co:component>
-            </smcb_bu:buildingComponents>
-        </smcb_bu:building>
+        <smcb_ci:count>1</smcb_ci:count>
+        <buildingType>JugendstilBuilding</buildingType>
+        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/BuildingJugendstil_Variant0.xml</smcb_ct:extern>
     </buildingDescriptor>
-   -->
+
+    <buildingDescriptor>
+        <smcb_ci:count>1</smcb_ci:count>
+        <buildingType>JugendstilBuilding</buildingType>
+        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/BuildingJugendstil_Variant1.xml</smcb_ct:extern>
+    </buildingDescriptor>
+  
+    <buildingDescriptor>
+        <smcb_ci:count>20</smcb_ci:count>
+        <buildingType>ArbitraryBuilding</buildingType>
+        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant0.xml</smcb_ct:extern>
+    </buildingDescriptor>
+
+     <buildingDescriptor>
+        <smcb_ci:count>20</smcb_ci:count>
+        <buildingType>ArbitraryBuilding</buildingType>
+        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant1.xml</smcb_ct:extern>
+    </buildingDescriptor>
+
+     <buildingDescriptor>
+        <smcb_ci:count>20</smcb_ci:count>
+        <buildingType>ArbitraryBuilding</buildingType>
+        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant2.xml</smcb_ct:extern>
+    </buildingDescriptor>
 </city>
