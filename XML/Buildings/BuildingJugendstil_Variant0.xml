@@ -113,7 +113,7 @@
     </jugendstilProbabilities>
     <objectplacementConfiguration>
         <smcb_ct:extern>
-            https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Objectplacement/Jugendstil_Objectplacement.xml
+            https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Objectplacement/Jugendstil_ObjectPlacement.xml
         </smcb_ct:extern>
     </objectplacementConfiguration>
 </buildingJugendstil>
