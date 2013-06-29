@@ -7,6 +7,10 @@
         xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd">
         <smcb_ct:polygonSource>
             <smcb_ct:file>
+                <!-- git -->
+                <smcb_ct:extern>http://raw.github.com/pgunia/SemanticCityBuilder/master/Models/SystemModels/Door0.obj</smcb_ct:extern>
+
+
                 <!-- WINDOWS -->
                 <smcb_ct:extern>file://J:\Promotion\Java\Prototype\ressource\ModelsErkergrundriss.obj</smcb_ct:extern>
                 
