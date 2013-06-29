@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <smcb_eb:exampleBased xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-        xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
         xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
         xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd">
@@ -12,7 +12,7 @@
 
 
                 <!-- WINDOWS -->
-                <smcb_ct:extern>file://J:\Promotion\Java\Prototype\ressource\ModelsErkergrundriss.obj</smcb_ct:extern>
+                <!-- <smcb_ct:extern>file://J:\Promotion\Java\Prototype\ressource\ModelsErkergrundriss.obj</smcb_ct:extern>-->
                 
                 <!-- OS X -->
                 <!-- <smcb_ct:extern>file:///Users/Patrick/Documents/promotion/Prototype/ressource/Models</smcb_ct:extern> -->

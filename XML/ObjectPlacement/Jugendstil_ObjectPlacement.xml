@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objectplacement
     xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
     xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
     xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement/ObjectplacementSchema.xsd">

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<city xmlns="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/City"
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ci="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/City"
-    xmlns:smcb_fl="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
-    xmlns:smcb_fp="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
-    xmlns:smcb_ct="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    xmlns:smcb_ro="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-    xmlns:smcb_bu="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-    xmlns:smcb_co="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-    xmlns:smcb_op="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-    xmlns:smcb_cb="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
-    xmlns:smcb_eb="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-    xsi:schemaLocation="https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/City 
- https://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/City/CitySchema.xsd">
+<city xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smcb_ci="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City"
+    xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
+    xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+    xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
+    xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City 
+ https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City/CitySchema.xsd">
     <!--
     <buildingDescriptor>
         <smcb_ci:count>1</smcb_ci:count>

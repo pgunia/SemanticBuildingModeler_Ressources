@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <building xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
     xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
     xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"

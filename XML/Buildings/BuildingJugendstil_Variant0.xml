@@ -4,7 +4,7 @@
     xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
     xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil 
     https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
     xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
     xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"

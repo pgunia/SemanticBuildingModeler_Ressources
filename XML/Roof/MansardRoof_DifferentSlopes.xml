@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<roof xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+<roof xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof 
     https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"
     xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"

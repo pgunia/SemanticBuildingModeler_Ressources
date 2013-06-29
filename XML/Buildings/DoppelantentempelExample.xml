@@ -8,7 +8,7 @@
  xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
  xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
  xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
- xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
  xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
  xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"

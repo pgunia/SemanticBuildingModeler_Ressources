@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<roof xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof 
+<roof xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof 
     https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"
     xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
     xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes">
