@@ -9,10 +9,11 @@
         <smcb_ct:polygonSource>
             <smcb_ct:file>
                 <!-- WINDOWS -->
-                <smcb_ct:extern>file://C:\Users\Patrick\Documents\GitHub\SemanticCityBuilder\Models\SystemModelsErkergrundriss.obj</smcb_ct:extern>
+                <!--
+                <smcb_ct:extern>file://C:\Users\Patrick\Documents\GitHub\SemanticCityBuilder\Models\SystemModelsErkergrundriss.obj</smcb_ct:extern> -->
                 
                 <!-- OS X -->
-                <!-- <smcb_ct:extern>file:///Users/Patrick/Documents/promotion/Prototype/ressource/Models/Erkergrundriss.obj</smcb_ct:extern> -->
+                <smcb_ct:extern>file:///Users/Patrick/SemanticCityBuilder/Models/Erkergrundriss.obj</smcb_ct:extern>
                 <smcb_ct:fileFormat>OBJ</smcb_ct:fileFormat>
             </smcb_ct:file>
         </smcb_ct:polygonSource>
