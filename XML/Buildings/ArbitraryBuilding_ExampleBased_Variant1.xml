@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<building xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
+<building xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor"
-    xmlns:smcb_fp="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-    xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-    xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-    xmlns:smcb_cb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
-    xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-    xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building 
-    http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building/BuildingSchema.xsd">
+    xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
+    xmlns:smcb_fp="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+    xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
+    xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+    xmlns:smcb_cb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+    xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building 
+    http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/BuildingSchema.xsd">
     <dimensions>
         <smcb_bu:width>
             <smcb_ct:lowerBorder>120.0</smcb_ct:lowerBorder>
@@ -29,7 +29,7 @@
     </dimensions>
     <smcb_ro:roof>
         <smcb_ct:extern>
-            http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/Roof/StandardRoof_DifferentSlopes.xml
+            http://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Roof/StandardRoof_DifferentSlopes.xml
         </smcb_ct:extern>
     </smcb_ro:roof>
     <smcb_bu:floors>
@@ -37,7 +37,7 @@
             <smcb_fl:floorposition>GROUND</smcb_fl:floorposition>
             <smcb_fp:footprint src="exampleBased">
                 <smcb_ct:extern>
-                    http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/FootprintExampleBased/Footprint_ExampleBasedSynthesis.xml
+                    http://raw.github.com/pgunia/SemanticCityBuilder/master/XML/FootprintExampleBased/Footprint_ExampleBasedSynthesis.xml
                 </smcb_ct:extern>
             </smcb_fp:footprint>
             <smcb_fl:floorHeight>

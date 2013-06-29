@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<system xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/System"
+<system xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/System"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/System SystemSchema.xsd">
+ xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/System SystemSchema.xsd">
     <applicationWindow>
         <width>1300</width>
         <height>1000</height>

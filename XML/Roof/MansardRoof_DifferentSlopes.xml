@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <roof xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof 
-    http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof/RoofSchema.xsd"
-    xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes">
+    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof 
+    http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"
+    xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes">
     <roofDescriptorMansardRoof>
         <roofScaling>1.05</roofScaling>
         <roofFirstSlopeSide>

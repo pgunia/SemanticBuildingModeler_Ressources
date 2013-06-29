@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
-  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof">
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof">
 
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
   <xs:element name="roof">
     <xs:annotation>

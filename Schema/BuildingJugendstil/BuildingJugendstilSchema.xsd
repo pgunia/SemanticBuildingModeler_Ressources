@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/BuildingJugendstil"
-  xmlns:smcb_buj="http://raw.github.com/pgunia/SemanticCityBuilder/master/BuildingJugendstil"
-  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
-  xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building"
-  xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
-  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-  xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor"
-  xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
+  xmlns:smcb_buj="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
+  xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+  xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
+  xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+  xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
+  xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
   elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
-  <xs:import namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Roof/RoofSchema.xsd"/>
-
-  <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component/ComponentSchema.xsd"/>
+  <xs:import namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"/>
 
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building/BuildingSchema.xsd"/>
-
-  <xs:import namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Floor"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building/FloorSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component/ComponentSchema.xsd"/>
 
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Objectplacement"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Building/ObjectplacementSchema.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/BuildingSchema.xsd"/>
+
+  <xs:import namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/FloorSchema.xsd"/>
+
+  <xs:import
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/ObjectplacementSchema.xsd"/>
 
 
   <xs:element name="buildingJugendstil">

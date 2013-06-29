@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objectplacement
-    xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
+    xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement/ObjectplacementSchema.xsd">
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement/ObjectplacementSchema.xsd">
         <smcb_op:maxCornerMainComponentDimensionsRatio>0.4</smcb_op:maxCornerMainComponentDimensionsRatio>
         <smcb_ct:polygonSource>
             <smcb_ct:modelCategory>Footprint</smcb_ct:modelCategory>

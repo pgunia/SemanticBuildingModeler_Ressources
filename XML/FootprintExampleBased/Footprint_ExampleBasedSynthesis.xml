@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<footprint xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
+<footprint xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint/FootprintSchema.xsd"
+    xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint/FootprintSchema.xsd"
     src="exampleBased">
     <smcb_eb:exampleBased>
         <smcb_ct:polygonSource>

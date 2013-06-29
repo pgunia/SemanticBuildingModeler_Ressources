@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <smcb_eb:exampleBased xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
+    <smcb_eb:exampleBased xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-        xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-        xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd">
+        xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+        xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+        xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis/ExampleBasedSynthesisSchema.xsd">
         <smcb_ct:polygonSource>
             <smcb_ct:file>
                 <!-- WINDOWS -->

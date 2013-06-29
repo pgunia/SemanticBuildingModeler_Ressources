@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <buildingJugendstil
-    xmlns="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil"
-    xsi:schemaLocation="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil 
-    http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/BuildingJugendstil/BuildingJugendstilSchema.xsd"
+    xmlns="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
+    xsi:schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil 
+    http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ct="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/CommonTypes"
-    xmlns:smcb_eb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ExampleBasedSynthesis"
-    xmlns:smcb_cb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/ClassBasedFootprint"
-    xmlns:smcb_ro="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Roof"
-    xmlns:smcb_bu="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Building"
-    xmlns:smcb_co="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Component"
-    xmlns:smcb_fp="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Footprint"
-    xmlns:smcb_op="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Objectplacement"
-    xmlns:smcb_pb="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/PolygonFootprint"
-    xmlns:smcb_fl="http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/SchemaDocuments/Floor">
+    xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    xmlns:smcb_eb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    xmlns:smcb_cb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+    xmlns:smcb_ro="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
+    xmlns:smcb_bu="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
+    xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+    xmlns:smcb_fp="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
+    xmlns:smcb_op="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    xmlns:smcb_pb="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
+    xmlns:smcb_fl="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor">
     <smcb_bu:dimensions>
         <smcb_bu:height>
             <smcb_ct:lowerBorder>200</smcb_ct:lowerBorder>
@@ -56,7 +56,7 @@
     
     <smcb_ro:roof>
         <smcb_ct:extern>
-            http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/Roof/StandardRoof_DifferentSlopes.xml
+            http://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Roof/StandardRoof_DifferentSlopes.xml
         </smcb_ct:extern>
     </smcb_ro:roof>
     
@@ -113,7 +113,7 @@
     </jugendstilProbabilities>
     <objectplacementConfiguration>
         <smcb_ct:extern>
-            http://crazyhorse.archaeologie.uni-koeln.de/~pgunia/XML/ObjectPlacement/JugendstilObjectplacement.xml
+            http://raw.github.com/pgunia/SemanticCityBuilder/master/XML/ObjectPlacement/JugendstilObjectplacement.xml
         </smcb_ct:extern>
     </objectplacementConfiguration>
 </buildingJugendstil>

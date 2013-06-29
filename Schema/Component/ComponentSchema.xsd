@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-  xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
-  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Component"
+  xmlns:smcb_ct="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+  xmlns:smcb_co="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+  targetNamespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
   elementFormDefault="qualified">
 
   <xs:import
-    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes"
-    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/CommonTypes/CommonTypes.xsd"/>
+    namespace="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    schemaLocation="http://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
   <!-- Component-Base-Descriptor -->
   <xs:element name="component">
