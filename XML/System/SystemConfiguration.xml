@@ -15,19 +15,19 @@
         <supportedTextureCategories>Wall,Roof,Ground,Test</supportedTextureCategories>
         <maxTextureSize>256</maxTextureSize>
         <maxTextureScaleFactor>1</maxTextureScaleFactor>
-        
+
         <!-- WINDOWS -->
         <texturePath>C:\\Users\Patrick\Dropbox\Promotion\\Models\\SystemTextures</texturePath>
     </textures>
+    
     <importModels>
         <supportedModelCategories>Window,Door,Pillar_Dorisch,Pillar_Ionisch,Triglyphe,Portal,Moulding_Gotisch,Moulding_Eckstein,Window_Jugendstil,Ledge</supportedModelCategories>
-        
         <!-- WINDOWS -->
         <modelPath>C:\\Users\Patrick\Dropbox\Promotion\\Models\\SystemModels</modelPath>
     </importModels>
+    
     <exportModels>
-        <!--<exportFolder>"ressource/Export/"</exportFolder>-->
-        <exportFolder>/Users/Patrick/Dropbox/Promotion/</exportFolder>
+        <exportFolder>"ressource/Export/"</exportFolder>
         <exportFile>ModelExport2</exportFile>
     </exportModels>
 </system>
