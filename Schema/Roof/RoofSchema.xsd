@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-  xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof">
+  xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+  xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof">
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
   <xs:element name="roof">
     <xs:annotation>
@@ -15,9 +15,9 @@
     </xs:annotation>
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="smcb_ro:roofDescriptor"/>
-        <xs:element ref="smcb_ct:extern"/>
-        <xs:element ref="smcb_ro:roofDescriptorMansardRoof" />
+        <xs:element ref="sbm_ro:roofDescriptor"/>
+        <xs:element ref="sbm_ct:extern"/>
+        <xs:element ref="sbm_ro:roofDescriptorMansardRoof" />
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -30,26 +30,26 @@
     </xs:annotation>
     <xs:complexType>
       <xs:all>
-        <xs:element name="roofScaling" type="smcb_ct:positiveFloat">
+        <xs:element name="roofScaling" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Factor which is used to scale the footprint of the
               upper floor. Roof-Scaling realizes an effect where the roof has an overhang over the
               building-floors. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="roofSlopeSide" type="smcb_ro:rangeRadRoof">
+        <xs:element name="roofSlopeSide" type="sbm_ro:rangeRadRoof">
           <xs:annotation>
             <xs:documentation> Slope (in radians) of the roof at the side-walls of the building.
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="roofSlopeMain" type="smcb_ro:rangeRadRoof">
+        <xs:element name="roofSlopeMain" type="sbm_ro:rangeRadRoof">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Slope (in radians) of the roof at the main-walls of the
               building. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="equalWeightForRoofSides" type="smcb_ct:floatFrom0To1" minOccurs="0">
+        <xs:element name="equalWeightForRoofSides" type="sbm_ct:floatFrom0To1" minOccurs="0">
           <xs:annotation>
             <xs:documentation xml:lang="en"> If the Roof-Slopes aren´t fixed the system decides
               wether or not to use the same slopes for all building-sides. This parameter describes
@@ -68,7 +68,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:all>
-        <xs:element name="roofScaling" type="smcb_ct:positiveFloat">
+        <xs:element name="roofScaling" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Factor which is used to scale the footprint of the
               upper floor. Roof-Scaling realizes an effect where the roof has an overhang over the
@@ -76,28 +76,28 @@
           </xs:annotation>
         </xs:element>
         
-        <xs:element name="roofFirstSlopeSide" type="smcb_ro:rangeRadRoof">
+        <xs:element name="roofFirstSlopeSide" type="sbm_ro:rangeRadRoof">
           <xs:annotation>
             <xs:documentation> Starting-slope (in radians) of the roof at the side-walls of the building.
             </xs:documentation>
           </xs:annotation>
         </xs:element>
         
-        <xs:element name="roofSecondSlopeSide" type="smcb_ro:rangeRadRoof">
+        <xs:element name="roofSecondSlopeSide" type="sbm_ro:rangeRadRoof">
           <xs:annotation>
             <xs:documentation> End-slope (in radians) of the roof at the side-walls of the building.
             </xs:documentation>
           </xs:annotation>
         </xs:element>
         
-        <xs:element name="roofFirstSlopeMain" type="smcb_ro:rangeRadRoof">
+        <xs:element name="roofFirstSlopeMain" type="sbm_ro:rangeRadRoof">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Starting-slope (in radians) of the roof at the main-walls of the
               building. </xs:documentation>
           </xs:annotation>
         </xs:element>
 
-        <xs:element name="roofSecondSlopeMain" type="smcb_ro:rangeRadRoof">
+        <xs:element name="roofSecondSlopeMain" type="sbm_ro:rangeRadRoof">
           <xs:annotation>
             <xs:documentation xml:lang="en"> End-slope (in radians) of the roof at the main-walls of the
               building. </xs:documentation>
@@ -112,7 +112,7 @@
           </xs:annotation>
         </xs:element>
         
-        <xs:element name="equalWeightForRoofSides" type="smcb_ct:floatFrom0To1" minOccurs="0">
+        <xs:element name="equalWeightForRoofSides" type="sbm_ct:floatFrom0To1" minOccurs="0">
           <xs:annotation>
             <xs:documentation xml:lang="en"> If the Roof-Slopes aren´t fixed the system decides
               wether or not to use the same slopes for all building-sides. This parameter describes

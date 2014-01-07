@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-  xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-  xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-  xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-  xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+  xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+  xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+  xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+  xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+  xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
   elementFormDefault="qualified" 
   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof/RoofSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor/FloorSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor/FloorSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component/ComponentSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component/ComponentSchema.xsd"/>
   
   
   <xs:element name="building">
@@ -31,16 +31,16 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_bu:dimensions"/>
-        <xs:element ref="smcb_ro:roof"/>
-        <xs:element ref="smcb_bu:floors">
+        <xs:element ref="sbm_bu:dimensions"/>
+        <xs:element ref="sbm_ro:roof"/>
+        <xs:element ref="sbm_bu:floors">
           <xs:annotation>
             <xs:documentation xml:lang="en">
               Descriptors for the floors the building consists of.
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element ref="smcb_bu:buildingComponents" />
+        <xs:element ref="sbm_bu:buildingComponents" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,7 +48,7 @@
   <xs:element name="floors">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_fl:floor" maxOccurs="3"/>
+        <xs:element ref="sbm_fl:floor" maxOccurs="3"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -61,7 +61,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:component" maxOccurs="unbounded">   
+        <xs:element ref="sbm_co:component" maxOccurs="unbounded">   
         </xs:element>
       </xs:sequence>
     </xs:complexType>
@@ -75,28 +75,28 @@
     </xs:annotation>
     <xs:complexType>
       <xs:all>
-        <xs:element name="height" type="smcb_ct:range">
+        <xs:element name="height" type="sbm_ct:range">
            <xs:annotation>
              <xs:documentation xml:lang="en">
                 Height of Construction
              </xs:documentation>
            </xs:annotation>
          </xs:element>
-        <xs:element name="length" type="smcb_ct:range">
+        <xs:element name="length" type="sbm_ct:range">
            <xs:annotation>
              <xs:documentation xml:lang="en">
                Length of Construction
              </xs:documentation>
            </xs:annotation>
          </xs:element>
-        <xs:element name="width" type="smcb_ct:range">
+        <xs:element name="width" type="sbm_ct:range">
           <xs:annotation>
             <xs:documentation xml:lang="en">
               Width of Construction
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="wallThickness" type="smcb_ct:positiveFloat">
+        <xs:element name="wallThickness" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en">
               Thickness of the walls which are computed by the system.

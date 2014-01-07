@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-  xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-  xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+  xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+  xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+  xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
   elementFormDefault="qualified" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint/FootprintSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint/FootprintSchema.xsd"/>
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
   <!--  ############################## Floor-Schema ############################## -->
 
@@ -29,13 +29,13 @@
         </xs:annotation>
         
         <xs:sequence>
-          <xs:element name="floorposition" type="smcb_ct:floorPositions"/>
+          <xs:element name="floorposition" type="sbm_ct:floorPositions"/>
           <xs:choice>
-            <xs:element ref="smcb_fp:footprint"/>
-            <xs:element name="reuseFloorDefinition" type="smcb_fl:reuseSource"/>
+            <xs:element ref="sbm_fp:footprint"/>
+            <xs:element name="reuseFloorDefinition" type="sbm_fl:reuseSource"/>
           </xs:choice>
           <xs:sequence>
-            <xs:element name="floorHeight" type="smcb_ct:range">
+            <xs:element name="floorHeight" type="sbm_ct:range">
               <xs:annotation>
                 <xs:documentation xml:lang="en"> Height of the current floor. </xs:documentation>
               </xs:annotation>
@@ -43,7 +43,7 @@
           </xs:sequence>
         </xs:sequence>
         
-        <xs:element ref="smcb_ct:extern"/>
+        <xs:element ref="sbm_ct:extern"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>

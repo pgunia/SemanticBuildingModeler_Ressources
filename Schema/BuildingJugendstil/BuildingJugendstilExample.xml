@@ -1,117 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <buildingJugendstil
-    xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil 
-    https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
+    xmlns="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil 
+    https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
     xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-    xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
-    xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
-    xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor">
-    <smcb_bu:dimensions>
-        <smcb_bu:height>
-            <smcb_ct:lowerBorder>100</smcb_ct:lowerBorder>
-            <smcb_ct:upperBorder>150</smcb_ct:upperBorder>
-        </smcb_bu:height>
-        <smcb_bu:length>
-            <smcb_ct:lowerBorder>70</smcb_ct:lowerBorder>
-            <smcb_ct:upperBorder>100</smcb_ct:upperBorder>
-        </smcb_bu:length>
-        <smcb_bu:width>
-            <smcb_ct:lowerBorder>40</smcb_ct:lowerBorder>
-            <smcb_ct:upperBorder>80</smcb_ct:upperBorder>
-        </smcb_bu:width>
-        <smcb_bu:wallThickness>5</smcb_bu:wallThickness>
-    </smcb_bu:dimensions>
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
+    xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
+    xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+    xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+    xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+    xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+    xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
+    xmlns:sbm_pb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"
+    xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor">
+    <sbm_bu:dimensions>
+        <sbm_bu:height>
+            <sbm_ct:lowerBorder>100</sbm_ct:lowerBorder>
+            <sbm_ct:upperBorder>150</sbm_ct:upperBorder>
+        </sbm_bu:height>
+        <sbm_bu:length>
+            <sbm_ct:lowerBorder>70</sbm_ct:lowerBorder>
+            <sbm_ct:upperBorder>100</sbm_ct:upperBorder>
+        </sbm_bu:length>
+        <sbm_bu:width>
+            <sbm_ct:lowerBorder>40</sbm_ct:lowerBorder>
+            <sbm_ct:upperBorder>80</sbm_ct:upperBorder>
+        </sbm_bu:width>
+        <sbm_bu:wallThickness>5</sbm_bu:wallThickness>
+    </sbm_bu:dimensions>
     <floorHeights>
         <floorHeight>
             <position>GROUND</position>
             <height>
-                <smcb_ct:lowerBorder>30</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>45</smcb_ct:upperBorder>
+                <sbm_ct:lowerBorder>30</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>45</sbm_ct:upperBorder>
             </height>
         </floorHeight>
         <floorHeight>
             <position>INTERMEDIATE</position>
             <height>
-                <smcb_ct:lowerBorder>35</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>55</smcb_ct:upperBorder>
+                <sbm_ct:lowerBorder>35</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>55</sbm_ct:upperBorder>
             </height>
         </floorHeight>
         <floorHeight>
             <position>TOP</position>
             <height>
-                <smcb_ct:lowerBorder>30</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>45</smcb_ct:upperBorder>
+                <sbm_ct:lowerBorder>30</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>45</sbm_ct:upperBorder>
             </height>
         </floorHeight>
     </floorHeights>
-    <smcb_ro:roof>
-        <smcb_ro:roofDescriptor>
-            <smcb_ro:roofSlopeMain>
-                <smcb_ro:lowerBorder>0.8</smcb_ro:lowerBorder>
-                <smcb_ro:upperBorder>1.2</smcb_ro:upperBorder>
-            </smcb_ro:roofSlopeMain>
-            <smcb_ro:roofSlopeSide>
-                <smcb_ro:lowerBorder>1.1</smcb_ro:lowerBorder>
-                <smcb_ro:upperBorder>1.57</smcb_ro:upperBorder>
-            </smcb_ro:roofSlopeSide>
-            <smcb_ro:roofScaling>1.0</smcb_ro:roofScaling>
-            <smcb_ro:equalWeightForRoofSides>0.0</smcb_ro:equalWeightForRoofSides>
-        </smcb_ro:roofDescriptor>
-    </smcb_ro:roof>
-    <smcb_bu:buildingComponents>
-        <smcb_co:component>
-            <smcb_co:window>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Window_Jugendstil</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:translationRatioForWindows>0.4</smcb_co:translationRatioForWindows>
-                <smcb_co:minDistanceBetweenWindowsRatio>0.05</smcb_co:minDistanceBetweenWindowsRatio>
-                <smcb_co:windowToTargetQuadRatio>
-                    <smcb_ct:lowerBorder>0.3</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>0.5</smcb_ct:upperBorder>
-                </smcb_co:windowToTargetQuadRatio>
-            </smcb_co:window>
-        </smcb_co:component>
-        <smcb_co:component>
-            <smcb_co:door>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Door</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:distanceToCornerRatio>0.1</smcb_co:distanceToCornerRatio>
-                <smcb_co:doorToTargetQuadRatio>
-                    <smcb_ct:lowerBorder>0.5</smcb_ct:lowerBorder>
-                </smcb_co:doorToTargetQuadRatio>
-            </smcb_co:door>
-        </smcb_co:component>
-        <smcb_co:component>
-            <smcb_co:windowLedge>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:ledgeToTargetQuadRatio>0.1</smcb_co:ledgeToTargetQuadRatio>
-            </smcb_co:windowLedge>
-        </smcb_co:component>
-        <smcb_co:component>
-            <smcb_co:fascia>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Moulding_Gotisch</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:mouldingHeightRatio>0.1</smcb_co:mouldingHeightRatio>
-                <smcb_co:targetFloors>
-                    <smcb_co:floorPosition>ALL</smcb_co:floorPosition>
-                </smcb_co:targetFloors>
-            </smcb_co:fascia>
-        </smcb_co:component>
-    </smcb_bu:buildingComponents>
+    <sbm_ro:roof>
+        <sbm_ro:roofDescriptor>
+            <sbm_ro:roofSlopeMain>
+                <sbm_ro:lowerBorder>0.8</sbm_ro:lowerBorder>
+                <sbm_ro:upperBorder>1.2</sbm_ro:upperBorder>
+            </sbm_ro:roofSlopeMain>
+            <sbm_ro:roofSlopeSide>
+                <sbm_ro:lowerBorder>1.1</sbm_ro:lowerBorder>
+                <sbm_ro:upperBorder>1.57</sbm_ro:upperBorder>
+            </sbm_ro:roofSlopeSide>
+            <sbm_ro:roofScaling>1.0</sbm_ro:roofScaling>
+            <sbm_ro:equalWeightForRoofSides>0.0</sbm_ro:equalWeightForRoofSides>
+        </sbm_ro:roofDescriptor>
+    </sbm_ro:roof>
+    <sbm_bu:buildingComponents>
+        <sbm_co:component>
+            <sbm_co:window>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Window_Jugendstil</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:translationRatioForWindows>0.4</sbm_co:translationRatioForWindows>
+                <sbm_co:minDistanceBetweenWindowsRatio>0.05</sbm_co:minDistanceBetweenWindowsRatio>
+                <sbm_co:windowToTargetQuadRatio>
+                    <sbm_ct:lowerBorder>0.3</sbm_ct:lowerBorder>
+                    <sbm_ct:upperBorder>0.5</sbm_ct:upperBorder>
+                </sbm_co:windowToTargetQuadRatio>
+            </sbm_co:window>
+        </sbm_co:component>
+        <sbm_co:component>
+            <sbm_co:door>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Door</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:distanceToCornerRatio>0.1</sbm_co:distanceToCornerRatio>
+                <sbm_co:doorToTargetQuadRatio>
+                    <sbm_ct:lowerBorder>0.5</sbm_ct:lowerBorder>
+                </sbm_co:doorToTargetQuadRatio>
+            </sbm_co:door>
+        </sbm_co:component>
+        <sbm_co:component>
+            <sbm_co:windowLedge>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Moulding_Eckstein</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:ledgeToTargetQuadRatio>0.1</sbm_co:ledgeToTargetQuadRatio>
+            </sbm_co:windowLedge>
+        </sbm_co:component>
+        <sbm_co:component>
+            <sbm_co:fascia>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Moulding_Gotisch</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:mouldingHeightRatio>0.1</sbm_co:mouldingHeightRatio>
+                <sbm_co:targetFloors>
+                    <sbm_co:floorPosition>ALL</sbm_co:floorPosition>
+                </sbm_co:targetFloors>
+            </sbm_co:fascia>
+        </sbm_co:component>
+    </sbm_bu:buildingComponents>
     <jugendstilProbabilities>
         <modifyGroundFootprintProbability>0.4</modifyGroundFootprintProbability>
         <modifyIntermediateFootprintProbability>0.4</modifyIntermediateFootprintProbability>
@@ -119,45 +119,45 @@
         <useGroundFloorFootprintForTopFloorProbability>0.7</useGroundFloorFootprintForTopFloorProbability>
     </jugendstilProbabilities>
     <objectplacementConfiguration>
-        <smcb_op:objectplacement>
-            <smcb_op:maxCornerMainComponentDimensionsRatio>0.4</smcb_op:maxCornerMainComponentDimensionsRatio>
-            <smcb_ct:polygonSource>
-                <smcb_ct:modelCategory>Footprint</smcb_ct:modelCategory>
-            </smcb_ct:polygonSource>
-            <smcb_op:placementScalingSubcomponents>
-                <smcb_ct:lowerBorder>0.6</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>0.9</smcb_ct:upperBorder>
-            </smcb_op:placementScalingSubcomponents>
-            <smcb_op:placementScalingMaincomponents>
-                <smcb_ct:lowerBorder>0.4</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>0.7</smcb_ct:upperBorder>
-            </smcb_op:placementScalingMaincomponents>
+        <sbm_op:objectplacement>
+            <sbm_op:maxCornerMainComponentDimensionsRatio>0.4</sbm_op:maxCornerMainComponentDimensionsRatio>
+            <sbm_ct:polygonSource>
+                <sbm_ct:modelCategory>Footprint</sbm_ct:modelCategory>
+            </sbm_ct:polygonSource>
+            <sbm_op:placementScalingSubcomponents>
+                <sbm_ct:lowerBorder>0.6</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>0.9</sbm_ct:upperBorder>
+            </sbm_op:placementScalingSubcomponents>
+            <sbm_op:placementScalingMaincomponents>
+                <sbm_ct:lowerBorder>0.4</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>0.7</sbm_ct:upperBorder>
+            </sbm_op:placementScalingMaincomponents>
 
-            <smcb_op:minNumberOfFreeBlocks>3</smcb_op:minNumberOfFreeBlocks>
-            <smcb_op:maxNumberOfSubcomponentsPerRay>1</smcb_op:maxNumberOfSubcomponentsPerRay>
-            <smcb_op:minSubcomponentSizeInBlocks>4</smcb_op:minSubcomponentSizeInBlocks>
-            <smcb_op:allowedSubcomponentTypes>
-                <smcb_op:type>RectComponent</smcb_op:type>
-                <smcb_op:type>CylindricComponent</smcb_op:type>
-            </smcb_op:allowedSubcomponentTypes>
-            <smcb_op:maxNumberOfRetriesPerRay>10</smcb_op:maxNumberOfRetriesPerRay>
+            <sbm_op:minNumberOfFreeBlocks>3</sbm_op:minNumberOfFreeBlocks>
+            <sbm_op:maxNumberOfSubcomponentsPerRay>1</sbm_op:maxNumberOfSubcomponentsPerRay>
+            <sbm_op:minSubcomponentSizeInBlocks>4</sbm_op:minSubcomponentSizeInBlocks>
+            <sbm_op:allowedSubcomponentTypes>
+                <sbm_op:type>RectComponent</sbm_op:type>
+                <sbm_op:type>CylindricComponent</sbm_op:type>
+            </sbm_op:allowedSubcomponentTypes>
+            <sbm_op:maxNumberOfRetriesPerRay>10</sbm_op:maxNumberOfRetriesPerRay>
 
-            <smcb_op:heightWidthRatioComponents>
-                <smcb_ct:lowerBorder>0.3</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>0.95</smcb_ct:upperBorder>
-            </smcb_op:heightWidthRatioComponents>
-            <smcb_op:maxSubMainComponentWidthRatio>0.7</smcb_op:maxSubMainComponentWidthRatio>
-            <smcb_op:minMainToSubcomponentDeviance>0.07</smcb_op:minMainToSubcomponentDeviance>
-            <smcb_op:numberOfIterations>1</smcb_op:numberOfIterations>
+            <sbm_op:heightWidthRatioComponents>
+                <sbm_ct:lowerBorder>0.3</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>0.95</sbm_ct:upperBorder>
+            </sbm_op:heightWidthRatioComponents>
+            <sbm_op:maxSubMainComponentWidthRatio>0.7</sbm_op:maxSubMainComponentWidthRatio>
+            <sbm_op:minMainToSubcomponentDeviance>0.07</sbm_op:minMainToSubcomponentDeviance>
+            <sbm_op:numberOfIterations>1</sbm_op:numberOfIterations>
 
-            <smcb_op:placementProbability>
-                <smcb_op:symmetry>0.2</smcb_op:symmetry>
-                <smcb_op:positionSubComponentsOnCorners>0.4</smcb_op:positionSubComponentsOnCorners>
-                <smcb_op:positionCylinders>0.2</smcb_op:positionCylinders>
-                <smcb_op:positionComponentsOnEdge>0.6</smcb_op:positionComponentsOnEdge>
-                <smcb_op:positionOnCenter>0.4</smcb_op:positionOnCenter>
-                <smcb_op:convexHull>0.0</smcb_op:convexHull>
-            </smcb_op:placementProbability>
-        </smcb_op:objectplacement>
+            <sbm_op:placementProbability>
+                <sbm_op:symmetry>0.2</sbm_op:symmetry>
+                <sbm_op:positionSubComponentsOnCorners>0.4</sbm_op:positionSubComponentsOnCorners>
+                <sbm_op:positionCylinders>0.2</sbm_op:positionCylinders>
+                <sbm_op:positionComponentsOnEdge>0.6</sbm_op:positionComponentsOnEdge>
+                <sbm_op:positionOnCenter>0.4</sbm_op:positionOnCenter>
+                <sbm_op:convexHull>0.0</sbm_op:convexHull>
+            </sbm_op:placementProbability>
+        </sbm_op:objectplacement>
     </objectplacementConfiguration>
 </buildingJugendstil>

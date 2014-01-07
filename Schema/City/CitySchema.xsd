@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City"
-  xmlns:smcb_ci="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City"
-  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-  xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-  xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-  xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-  xmlns:smcb_xsi="https://www.w3.org/2001/XMLSchema-instance"
-  xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-  xmlns:smcb_buj="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-  xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-  xmlns:smcb_budt="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel"
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/City"
+  xmlns:sbm_ci="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/City"
+  xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+  xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+  xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+  xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+  xmlns:sbm_xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+  xmlns:sbm_buj="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+  xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+  xmlns:sbm_budt="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel"
   elementFormDefault="qualified">
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/BuildingSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building/BuildingSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel/BuildingDoppelantentempelSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel/BuildingDoppelantentempelSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component/ComponentSchema.xsd"/>
-  <xs:import namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/FloorSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component/ComponentSchema.xsd"/>
+  <xs:import namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/FloorSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint/FootprintSchema.xsd"/>
-  <xs:import namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint/FootprintSchema.xsd"/>
+  <xs:import namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof/RoofSchema.xsd"/>
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
   <xs:element name="city">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_ci:buildingDescriptor" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="sbm_ci:buildingDescriptor" minOccurs="1" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -58,13 +58,13 @@
         </xs:element>
         <xs:choice>
           <xs:choice>
-            <xs:element ref="smcb_bu:building"/>
-            <xs:element ref="smcb_buj:buildingJugendstil"/>
-            <xs:element ref="smcb_budt:buildingDoppelantentempel"/>
+            <xs:element ref="sbm_bu:building"/>
+            <xs:element ref="sbm_buj:buildingJugendstil"/>
+            <xs:element ref="sbm_budt:buildingDoppelantentempel"/>
           </xs:choice>
           <xs:sequence>
-            <xs:element name="buildingType" type="smcb_ci:class"/>
-            <xs:element ref="smcb_ct:extern"/>
+            <xs:element name="buildingType" type="sbm_ci:class"/>
+            <xs:element ref="sbm_ct:extern"/>
           </xs:sequence>
         </xs:choice>
       </xs:sequence>

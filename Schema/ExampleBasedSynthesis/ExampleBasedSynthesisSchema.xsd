@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
+    targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"> 
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"> 
     
     <xs:import
-        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
     
     <xs:element name="exampleBased">
         <xs:annotation>
@@ -17,8 +17,8 @@
         </xs:annotation>
         <xs:complexType>
             <xs:all>
-                <xs:element ref="smcb_ct:polygonSource"/>
-                <xs:element name="firstComponentType" type="smcb_eb:ruleTypes" default="INSIDE" minOccurs="0">
+                <xs:element ref="sbm_ct:polygonSource"/>
+                <xs:element name="firstComponentType" type="sbm_eb:ruleTypes" default="INSIDE" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Type of the first rule which is used to assign states
                             to components of the algorithm. </xs:documentation>

@@ -1,110 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <buildingJugendstil
-    xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil 
-    https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
+    xmlns="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil 
+    https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-    xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
-    xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
-    xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor">
-    <smcb_bu:dimensions>
-        <smcb_bu:height>
-            <smcb_ct:lowerBorder>150</smcb_ct:lowerBorder>
-            <smcb_ct:upperBorder>200</smcb_ct:upperBorder>
-        </smcb_bu:height>
-        <smcb_bu:length>
-            <smcb_ct:lowerBorder>130</smcb_ct:lowerBorder>
-            <smcb_ct:upperBorder>180</smcb_ct:upperBorder>
-        </smcb_bu:length>
-        <smcb_bu:width>
-            <smcb_ct:lowerBorder>80</smcb_ct:lowerBorder>
-            <smcb_ct:upperBorder>120</smcb_ct:upperBorder>
-        </smcb_bu:width>
-        <smcb_bu:wallThickness>5</smcb_bu:wallThickness>
-    </smcb_bu:dimensions>
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
+    xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
+    xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+    xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+    xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+    xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+    xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
+    xmlns:sbm_pb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"
+    xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor">
+    <sbm_bu:dimensions>
+        <sbm_bu:height>
+            <sbm_ct:lowerBorder>150</sbm_ct:lowerBorder>
+            <sbm_ct:upperBorder>200</sbm_ct:upperBorder>
+        </sbm_bu:height>
+        <sbm_bu:length>
+            <sbm_ct:lowerBorder>130</sbm_ct:lowerBorder>
+            <sbm_ct:upperBorder>180</sbm_ct:upperBorder>
+        </sbm_bu:length>
+        <sbm_bu:width>
+            <sbm_ct:lowerBorder>80</sbm_ct:lowerBorder>
+            <sbm_ct:upperBorder>120</sbm_ct:upperBorder>
+        </sbm_bu:width>
+        <sbm_bu:wallThickness>5</sbm_bu:wallThickness>
+    </sbm_bu:dimensions>
     <floorHeights>
         <floorHeight>
             <position>GROUND</position>
             <height>
-                <smcb_ct:lowerBorder>30</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>45</smcb_ct:upperBorder>
+                <sbm_ct:lowerBorder>30</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>45</sbm_ct:upperBorder>
             </height>
         </floorHeight>
         <floorHeight>
             <position>INTERMEDIATE</position>
             <height>
-                <smcb_ct:lowerBorder>45</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>60</smcb_ct:upperBorder>
+                <sbm_ct:lowerBorder>45</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>60</sbm_ct:upperBorder>
             </height>
         </floorHeight>
         <floorHeight>
             <position>TOP</position>
             <height>
-                <smcb_ct:lowerBorder>40</smcb_ct:lowerBorder>
-                <smcb_ct:upperBorder>55</smcb_ct:upperBorder>
+                <sbm_ct:lowerBorder>40</sbm_ct:lowerBorder>
+                <sbm_ct:upperBorder>55</sbm_ct:upperBorder>
             </height>
         </floorHeight>
     </floorHeights>
 
-    <smcb_ro:roof>
-        <smcb_ct:extern>
-            https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Roof/MansardRoof_DifferentSlopes.xml
-        </smcb_ct:extern>
-    </smcb_ro:roof>
+    <sbm_ro:roof>
+        <sbm_ct:extern>
+            https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Roof/MansardRoof_DifferentSlopes.xml
+        </sbm_ct:extern>
+    </sbm_ro:roof>
 
-    <smcb_bu:buildingComponents>
-        <smcb_co:component>
-            <smcb_co:window>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Window_Jugendstil</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:translationRatioForWindows>0.4</smcb_co:translationRatioForWindows>
-                <smcb_co:minDistanceBetweenWindowsRatio>0.05</smcb_co:minDistanceBetweenWindowsRatio>
-                <smcb_co:windowToTargetQuadRatio>
-                    <smcb_ct:lowerBorder>0.3</smcb_ct:lowerBorder>
-                    <smcb_ct:upperBorder>0.5</smcb_ct:upperBorder>
-                </smcb_co:windowToTargetQuadRatio>
-            </smcb_co:window>
-        </smcb_co:component>
-        <smcb_co:component>
-            <smcb_co:door>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Door</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:distanceToCornerRatio>0.1</smcb_co:distanceToCornerRatio>
-                <smcb_co:doorToTargetQuadRatio>
-                    <smcb_ct:lowerBorder>0.5</smcb_ct:lowerBorder>
-                </smcb_co:doorToTargetQuadRatio>
-            </smcb_co:door>
-        </smcb_co:component>
-        <smcb_co:component>
-            <smcb_co:windowLedge>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:ledgeToTargetQuadRatio>0.07</smcb_co:ledgeToTargetQuadRatio>
-            </smcb_co:windowLedge>
-        </smcb_co:component>
-        <smcb_co:component>
-            <smcb_co:fascia>
-                <smcb_co:componentModelSource>
-                    <smcb_co:modelCategory>Moulding_Gotisch</smcb_co:modelCategory>
-                </smcb_co:componentModelSource>
-                <smcb_co:mouldingHeightRatio>0.1</smcb_co:mouldingHeightRatio>
-                <smcb_co:targetFloors>
-                    <smcb_co:floorPosition>ALL</smcb_co:floorPosition>
-                </smcb_co:targetFloors>
-            </smcb_co:fascia>
-        </smcb_co:component>
-    </smcb_bu:buildingComponents>
+    <sbm_bu:buildingComponents>
+        <sbm_co:component>
+            <sbm_co:window>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Window_Jugendstil</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:translationRatioForWindows>0.4</sbm_co:translationRatioForWindows>
+                <sbm_co:minDistanceBetweenWindowsRatio>0.05</sbm_co:minDistanceBetweenWindowsRatio>
+                <sbm_co:windowToTargetQuadRatio>
+                    <sbm_ct:lowerBorder>0.3</sbm_ct:lowerBorder>
+                    <sbm_ct:upperBorder>0.5</sbm_ct:upperBorder>
+                </sbm_co:windowToTargetQuadRatio>
+            </sbm_co:window>
+        </sbm_co:component>
+        <sbm_co:component>
+            <sbm_co:door>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Door</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:distanceToCornerRatio>0.1</sbm_co:distanceToCornerRatio>
+                <sbm_co:doorToTargetQuadRatio>
+                    <sbm_ct:lowerBorder>0.5</sbm_ct:lowerBorder>
+                </sbm_co:doorToTargetQuadRatio>
+            </sbm_co:door>
+        </sbm_co:component>
+        <sbm_co:component>
+            <sbm_co:windowLedge>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Moulding_Eckstein</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:ledgeToTargetQuadRatio>0.07</sbm_co:ledgeToTargetQuadRatio>
+            </sbm_co:windowLedge>
+        </sbm_co:component>
+        <sbm_co:component>
+            <sbm_co:fascia>
+                <sbm_co:componentModelSource>
+                    <sbm_co:modelCategory>Moulding_Gotisch</sbm_co:modelCategory>
+                </sbm_co:componentModelSource>
+                <sbm_co:mouldingHeightRatio>0.1</sbm_co:mouldingHeightRatio>
+                <sbm_co:targetFloors>
+                    <sbm_co:floorPosition>ALL</sbm_co:floorPosition>
+                </sbm_co:targetFloors>
+            </sbm_co:fascia>
+        </sbm_co:component>
+    </sbm_bu:buildingComponents>
     <jugendstilProbabilities>
         <modifyGroundFootprintProbability>0.4</modifyGroundFootprintProbability>
         <modifyIntermediateFootprintProbability>0.5</modifyIntermediateFootprintProbability>
@@ -112,8 +112,8 @@
         <useGroundFloorFootprintForTopFloorProbability>0.6</useGroundFloorFootprintForTopFloorProbability>
     </jugendstilProbabilities>
     <objectplacementConfiguration>
-        <smcb_ct:extern>
-            https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/ObjectPlacement/Jugendstil_ObjectPlacement.xml
-        </smcb_ct:extern>
+        <sbm_ct:extern>
+            https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/ObjectPlacement/Jugendstil_ObjectPlacement.xml
+        </sbm_ct:extern>
     </objectplacementConfiguration>
 </buildingJugendstil>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
+    targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"> 
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"> 
     
     <xs:import
-        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
     
     <xs:element name="classBased">
         <xs:annotation>
@@ -17,7 +17,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="className" type="smcb_ct:avaiableFootprintClasses">
+                <xs:element name="className" type="sbm_ct:avaiableFootprintClasses">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Name of the class which contains the
                             footprint-description. </xs:documentation>

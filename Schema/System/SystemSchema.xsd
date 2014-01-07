@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/System"
-  xmlns:sy="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/System">
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/System"
+  xmlns:sy="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/System">
   <xs:element name="system">
     <xs:complexType>
       <xs:sequence>

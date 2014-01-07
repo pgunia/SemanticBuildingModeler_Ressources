@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel"
-    xmlns:smcb_budt="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel"
-    xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
+    targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel"
+    xmlns:sbm_budt="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel"
+    xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+    xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+    xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
     elementFormDefault="qualified" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
     
     <xs:import
-        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
     
-    <xs:import namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"/>
-    
-    <xs:import
-        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component/ComponentSchema.xsd"/>
+    <xs:import namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof/RoofSchema.xsd"/>
     
     <xs:import
-        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/BuildingSchema.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component/ComponentSchema.xsd"/>
+    
+    <xs:import
+        namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building/BuildingSchema.xsd"/>
     
     <xs:element name="buildingDoppelantentempel">
         <xs:annotation>
-            <xs:documentation xml:lang="en"> Element smcb_contains all necessary information to smcb_construsmcb_ct a
-                smcb_building. </xs:documentation>
+            <xs:documentation xml:lang="en"> Element sbm_contains all necessary information to sbm_construsbm_ct a
+                sbm_building. </xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="smcb_bu:dimensions"/>
-                <xs:element ref="smcb_budt:doppelantentempelParameters" />
-                <xs:element ref="smcb_ro:roof"/>
-                <xs:element ref="smcb_budt:buildingComponentsDoppelantentempel" />
+                <xs:element ref="sbm_bu:dimensions"/>
+                <xs:element ref="sbm_budt:doppelantentempelParameters" />
+                <xs:element ref="sbm_ro:roof"/>
+                <xs:element ref="sbm_budt:buildingComponentsDoppelantentempel" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -41,15 +41,15 @@
     <xs:element name="buildingComponentsDoppelantentempel">
         <xs:annotation>
             <xs:documentation xml:lang="en">
-                The Doppelantentempel is a specialized smcb_building which needs a special set of smcb_components to be smcb_construsmcb_cted. This element defines all necessary smcb_building-smcb_component which have to be defined.
+                The Doppelantentempel is a specialized sbm_building which needs a special set of sbm_components to be sbm_construsbm_cted. This element defines all necessary sbm_building-sbm_component which have to be defined.
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="smcb_co:roundstairs" />
-                <xs:element ref="smcb_co:fascia" />
-                <xs:element ref="smcb_co:pillar" />
-                <xs:element ref="smcb_co:edgeaddition" />
+                <xs:element ref="sbm_co:roundstairs" />
+                <xs:element ref="sbm_co:fascia" />
+                <xs:element ref="sbm_co:pillar" />
+                <xs:element ref="sbm_co:edgeaddition" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -57,21 +57,21 @@
     <xs:element name="doppelantentempelParameters">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="architraveHeight" type="smcb_ct:positiveFloat" >
+                <xs:element name="architraveHeight" type="sbm_ct:positiveFloat" >
                     <xs:annotation>
                         <xs:documentation xml:lang="en">
                             Height of the Architrave.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="metopeHeight" type="smcb_ct:positiveFloat">
+                <xs:element name="metopeHeight" type="sbm_ct:positiveFloat">
                     <xs:annotation>
                         <xs:documentation xml:lang="en">
                             Height of the Metope.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="geisonHeight" type="smcb_ct:positiveFloat">
+                <xs:element name="geisonHeight" type="sbm_ct:positiveFloat">
                     <xs:annotation>
                         <xs:documentation xml:lang="en">
                             Height of the Gleison.

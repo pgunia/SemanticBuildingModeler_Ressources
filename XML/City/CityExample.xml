@@ -1,57 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<city xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:smcb_ci="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City"
-    xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-    xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
-    xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
-    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City 
- https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/City/CitySchema.xsd">
+<city xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/City https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/City/CitySchema.xsd"
+ xmlns="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/City"
+ xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
+ xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+ xmlns:sbm_ci="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/City"
+ xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+ xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+ xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
+ xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+ xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+ xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
+ xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component">
 
     <!-- DOPPELANTENTEMPEL EXAMPLE -->
     <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
+        <sbm_ci:count>1</sbm_ci:count>
         <buildingType>Doppelantentempel</buildingType>
-        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/DoppelantentempelExample.xml</smcb_ct:extern>
+        <sbm_ct:extern>https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Buildings/DoppelantentempelExample.xml</sbm_ct:extern>
     </buildingDescriptor>
  
 
     <!-- JUGENDSTIL BUILDING EXAMPLE -->
     <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
+        <sbm_ci:count>1</sbm_ci:count>
         <buildingType>JugendstilBuilding</buildingType>
-        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/BuildingJugendstil_Variant0.xml</smcb_ct:extern>
+        <sbm_ct:extern>https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Buildings/BuildingJugendstil_Variant0.xml</sbm_ct:extern>
     </buildingDescriptor>
 
     <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
+        <sbm_ci:count>1</sbm_ci:count>
         <buildingType>JugendstilBuilding</buildingType>
-        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/BuildingJugendstil_Variant1.xml</smcb_ct:extern>
+        <sbm_ct:extern>https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Buildings/BuildingJugendstil_Variant1.xml</sbm_ct:extern>
     </buildingDescriptor>
   
 
     <!-- ARBITRARY BUILDING EXAMPLES -->
     <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
+        <sbm_ci:count>1</sbm_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
-        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant0.xml</smcb_ct:extern>
+        <sbm_ct:extern>https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant0.xml</sbm_ct:extern>
     </buildingDescriptor>
 
      <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
+        <sbm_ci:count>1</sbm_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
-        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant1.xml</smcb_ct:extern>
+        <sbm_ct:extern>https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant1.xml</sbm_ct:extern>
     </buildingDescriptor>
 
      <buildingDescriptor>
-        <smcb_ci:count>1</smcb_ci:count>
+        <sbm_ci:count>1</sbm_ci:count>
         <buildingType>ArbitraryBuilding</buildingType>
-        <smcb_ct:extern>https://raw.github.com/pgunia/SemanticCityBuilder/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant2.xml</smcb_ct:extern>
+        <sbm_ct:extern>https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/XML/Buildings/ArbitraryBuilding_ExampleBased_Variant2.xml</sbm_ct:extern>
     </buildingDescriptor>
 </city>

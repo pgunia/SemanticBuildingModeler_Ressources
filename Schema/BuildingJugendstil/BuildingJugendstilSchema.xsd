@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-  xmlns:smcb_buj="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingJugendstil"
-  xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-  xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-  xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-  xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-  xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+  xmlns:sbm_buj="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+  xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+  xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+  xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+  xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+  xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+  xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
   elementFormDefault="qualified" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
-  <xs:import namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof/RoofSchema.xsd"/>
-
-  <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component/ComponentSchema.xsd"/>
+  <xs:import namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof/RoofSchema.xsd"/>
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/BuildingSchema.xsd"/>
-
-  <xs:import namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/FloorSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component/ComponentSchema.xsd"/>
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building/ObjectplacementSchema.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building/BuildingSchema.xsd"/>
+
+  <xs:import namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building/FloorSchema.xsd"/>
+
+  <xs:import
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building/ObjectplacementSchema.xsd"/>
 
 
   <xs:element name="buildingJugendstil">
@@ -40,12 +40,12 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_bu:dimensions"/>
-        <xs:element ref="smcb_buj:floorHeights"/>
-        <xs:element ref="smcb_ro:roof"/>
-        <xs:element ref="smcb_bu:buildingComponents"/>
-        <xs:element ref="smcb_buj:jugendstilProbabilities"/>
-        <xs:element ref="smcb_buj:objectplacementConfiguration"/>
+        <xs:element ref="sbm_bu:dimensions"/>
+        <xs:element ref="sbm_buj:floorHeights"/>
+        <xs:element ref="sbm_ro:roof"/>
+        <xs:element ref="sbm_bu:buildingComponents"/>
+        <xs:element ref="sbm_buj:jugendstilProbabilities"/>
+        <xs:element ref="sbm_buj:objectplacementConfiguration"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -62,7 +62,7 @@
           (GROUND, INTERMEDIATE, TOP). </xs:documentation>
       </xs:annotation>
       <xs:sequence>
-        <xs:element name="floorHeight" type="smcb_buj:floorHeight" minOccurs="3" maxOccurs="3"/>
+        <xs:element name="floorHeight" type="sbm_buj:floorHeight" minOccurs="3" maxOccurs="3"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -73,8 +73,8 @@
         INTERMEDIATE). </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="position" type="smcb_ct:floorPositions"/>
-      <xs:element name="height" type="smcb_ct:range"/>
+      <xs:element name="position" type="sbm_ct:floorPositions"/>
+      <xs:element name="height" type="sbm_ct:range"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -88,26 +88,26 @@
           other floors. </xs:documentation>
       </xs:annotation>
       <xs:sequence>
-        <xs:element name="modifyGroundFootprintProbability" type="smcb_ct:floatFrom0To1">
+        <xs:element name="modifyGroundFootprintProbability" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Standard-Footprint for Jugendstil-Buildings is a
               rectangle. This value describes the possibility that this rectangle is modified by the
               objectplacement-algorithm to generate a Ground-Footprint. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="modifyIntermediateFootprintProbability" type="smcb_ct:floatFrom0To1">
+        <xs:element name="modifyIntermediateFootprintProbability" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Probability that the Ground-Footprint is modified and
               used as Intermediate-Footprint. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="modifyTopFootprintProbability" type="smcb_ct:floatFrom0To1">
+        <xs:element name="modifyTopFootprintProbability" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Probability that the Intermediate-Footprint is modified
               and used as Top-Footprint. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="useGroundFloorFootprintForTopFloorProbability" type="smcb_ct:floatFrom0To1">
+        <xs:element name="useGroundFloorFootprintForTopFloorProbability" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> This value describes wether or not to reuse the
               Ground-Footprint for the Top-floor. </xs:documentation>
@@ -125,8 +125,8 @@
     </xs:annotation>
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="smcb_ct:extern"/>
-        <xs:element ref="smcb_op:objectplacement"/>
+        <xs:element ref="sbm_ct:extern"/>
+        <xs:element ref="sbm_op:objectplacement"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>

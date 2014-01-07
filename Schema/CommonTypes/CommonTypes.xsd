@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes">
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes">
     <xs:complexType name="range">
         <xs:annotation>
             <xs:documentation xml:lang="en"> Datatype describes a range from a lower-border-float-value to
@@ -21,8 +21,8 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="lowerBorder" type="smcb_ct:floatFrom0To1"/>
-            <xs:element name="upperBorder" type="smcb_ct:floatFrom0To1" minOccurs="0"/>
+            <xs:element name="lowerBorder" type="sbm_ct:floatFrom0To1"/>
+            <xs:element name="upperBorder" type="sbm_ct:floatFrom0To1" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -107,9 +107,9 @@
                     consisting of 3 Floating-Point Coordinates. </xs:documentation>
             </xs:annotation>
             <xs:sequence>
-                <xs:element name="x" type="smcb_ct:coordinate"/>
-                <xs:element name="y" type="smcb_ct:coordinate"/>
-                <xs:element name="z" type="smcb_ct:coordinate"/>
+                <xs:element name="x" type="sbm_ct:coordinate"/>
+                <xs:element name="y" type="sbm_ct:coordinate"/>
+                <xs:element name="z" type="sbm_ct:coordinate"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -131,9 +131,9 @@
                     Vertices. </xs:documentation>
             </xs:annotation>
             <xs:choice>
-                <xs:element ref="smcb_ct:extern" />
+                <xs:element ref="sbm_ct:extern" />
                 <xs:sequence minOccurs="3" maxOccurs="unbounded">
-                    <xs:element ref="smcb_ct:vertex"/>
+                    <xs:element ref="sbm_ct:vertex"/>
                 </xs:sequence>
             </xs:choice>
         </xs:complexType>
@@ -171,8 +171,8 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element ref="smcb_ct:extern"/>
-            <xs:element name="fileFormat" type="smcb_ct:supportedModelFileFormats" />
+            <xs:element ref="sbm_ct:extern"/>
+            <xs:element name="fileFormat" type="sbm_ct:supportedModelFileFormats" />
         </xs:sequence>
     </xs:complexType>
     
@@ -204,16 +204,16 @@
                 <xs:documentation xml:lang="en"> Datatype defines the source of a polygon. </xs:documentation>
             </xs:annotation>
             <xs:choice>
-                <xs:element name="exampleClass" type="smcb_ct:avaiableFootprintClasses">
+                <xs:element name="exampleClass" type="sbm_ct:avaiableFootprintClasses">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Classname of a class describing a footprinttype.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element ref="smcb_ct:polygon"/>
-                <xs:element name="file" type="smcb_ct:modelFile" />
-                <xs:element name="modelCategory" type="smcb_ct:supportedModelCategories" />
-                <xs:element name="reuseFootprint" type="smcb_ct:reuseFootprintEnum" />
+                <xs:element ref="sbm_ct:polygon"/>
+                <xs:element name="file" type="sbm_ct:modelFile" />
+                <xs:element name="modelCategory" type="sbm_ct:supportedModelCategories" />
+                <xs:element name="reuseFootprint" type="sbm_ct:reuseFootprintEnum" />
             </xs:choice>
         </xs:complexType>
     </xs:element>

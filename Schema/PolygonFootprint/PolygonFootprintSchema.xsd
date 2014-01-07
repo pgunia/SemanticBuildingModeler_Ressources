@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
+        targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"
         elementFormDefault="qualified" attributeFormDefault="unqualified"
-        xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"> 
+        xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+        xmlns:sbm_pb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"> 
         
         <xs:import
-            namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-            schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+            namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+            schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
         
         <xs:element name="polygonBased">
             <xs:annotation>
@@ -16,7 +16,7 @@
             </xs:annotation>
             <xs:complexType>
                 <xs:sequence>
-                    <xs:element name="modelSource" type="smcb_ct:modelFile" />
+                    <xs:element name="modelSource" type="sbm_ct:modelFile" />
                 </xs:sequence>
             </xs:complexType>
         </xs:element>

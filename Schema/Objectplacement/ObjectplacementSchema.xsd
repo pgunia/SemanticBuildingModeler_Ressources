@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
+    targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
     elementFormDefault="qualified" attributeFormDefault="unqualified"
-    xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"> 
+    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"> 
     
     <xs:import
-        namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-        schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+        namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+        schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
     
     <xs:element name="objectplacement">
         <xs:annotation>
@@ -18,7 +18,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:all>
-                <xs:element ref="smcb_ct:polygonSource" />
+                <xs:element ref="sbm_ct:polygonSource" />
                 <xs:element name="maxCornerMainComponentDimensionsRatio" type="xs:float" default="0.4"
                     minOccurs="0">
                     <xs:annotation>
@@ -62,26 +62,26 @@
                     </xs:annotation>
                 </xs:element>
                 
-                <xs:element name="heightWidthRatioComponents" type="smcb_ct:rangeOTo1" minOccurs="0">
+                <xs:element name="heightWidthRatioComponents" type="sbm_ct:rangeOTo1" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Ratio of subcomponent-height to subcomponent-width.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 
-                <xs:element name="placementScalingSubcomponents" type="smcb_ct:rangeOTo1" minOccurs="0">
+                <xs:element name="placementScalingSubcomponents" type="sbm_ct:rangeOTo1" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Rescaling-factor for positioned subcomponents.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="placementScalingMaincomponents" type="smcb_ct:rangeOTo1" minOccurs="0">
+                <xs:element name="placementScalingMaincomponents" type="sbm_ct:rangeOTo1" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Rescaling-factor for positioned maincomponents.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element ref="smcb_op:allowedSubcomponentTypes" />
+                <xs:element ref="sbm_op:allowedSubcomponentTypes" />
                 <xs:element name="minMainToSubcomponentDeviance" type="xs:float" minOccurs="0"
                     default="0.07">
                     <xs:annotation>
@@ -90,7 +90,7 @@
                             having the same width as the maincomponent they are positioned on. </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element ref="smcb_op:placementProbability"> </xs:element>
+                <xs:element ref="sbm_op:placementProbability"> </xs:element>
                 <xs:element name="numberOfIterations" type="xs:positiveInteger" default="1" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en">
@@ -117,7 +117,7 @@
     <xs:element name="allowedSubcomponentTypes">
         <xs:complexType>
             <xs:sequence maxOccurs="unbounded">
-                <xs:element name="type" type="smcb_op:subcomponentTypes"/>
+                <xs:element name="type" type="sbm_op:subcomponentTypes"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -129,39 +129,39 @@
         </xs:annotation>
         <xs:complexType>
             <xs:all>
-                <xs:element name="symmetry" type="smcb_ct:floatFrom0To1" default="0.0" minOccurs="0">
+                <xs:element name="symmetry" type="sbm_ct:floatFrom0To1" default="0.0" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Probability that subcomponents are positioned
                             symmetrically on opposite edges of the maincomponent. </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="positionSubComponentsOnCorners" type="smcb_ct:floatFrom0To1" default="0.0"
+                <xs:element name="positionSubComponentsOnCorners" type="sbm_ct:floatFrom0To1" default="0.0"
                     minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Probability that the system positiones subcomponents of
                             corners of the maincomponent. </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="positionCylinders" type="smcb_ct:floatFrom0To1" default="0.3" minOccurs="0">
+                <xs:element name="positionCylinders" type="sbm_ct:floatFrom0To1" default="0.3" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Probability that cylinders are used as subcomponents.
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="positionComponentsOnEdge" type="smcb_ct:floatFrom0To1" default="1.0"
+                <xs:element name="positionComponentsOnEdge" type="sbm_ct:floatFrom0To1" default="1.0"
                     minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Probability that subcomponents are positioned on edges
                             of the maincomponent. </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="positionOnCenter" type="smcb_ct:floatFrom0To1" default="0.3" minOccurs="0">
+                <xs:element name="positionOnCenter" type="sbm_ct:floatFrom0To1" default="0.3" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Probability that subcomponents are positioned on the
                             center of a maincomponent-edge. </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="convexHull" type="smcb_ct:floatFrom0To1" default="0.0" minOccurs="0">
+                <xs:element name="convexHull" type="sbm_ct:floatFrom0To1" default="0.0" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation xml:lang="en"> Probability that the algorithm uses a convex hull
                             implementation to compute the result-polygon based on the main- and

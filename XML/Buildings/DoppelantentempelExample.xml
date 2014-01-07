@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <buildingDoppelantentempel 
- xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
- xmlns:smcb_eb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ExampleBasedSynthesis"
- xmlns:smcb_cb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/ClassBasedFootprint"
- xmlns="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel"
- xmlns:smcb_ro="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Roof"
- xmlns:smcb_bu="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Building"
- xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+ xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+ xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
+ xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
+ xmlns="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel"
+ xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+ xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+ xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:smcb_fp="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Footprint"
- xmlns:smcb_op="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Objectplacement"
- xmlns:smcb_pb="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/PolygonFootprint"
- xmlns:smcb_fl="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Floor"
- xsi:schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/BuildingDoppelantentempel/BuildingDoppelantentempelSchema.xsd">
-    <smcb_bu:dimensions>
-        <smcb_bu:height>
-            <smcb_ct:lowerBorder>150</smcb_ct:lowerBorder>
-        </smcb_bu:height>
-        <smcb_bu:length>
-            <smcb_ct:lowerBorder>1000</smcb_ct:lowerBorder>
-        </smcb_bu:length>
-        <smcb_bu:width>
-            <smcb_ct:lowerBorder>700</smcb_ct:lowerBorder>
-        </smcb_bu:width>
-        <smcb_bu:wallThickness>5</smcb_bu:wallThickness>
-    </smcb_bu:dimensions>
+ xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+ xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
+ xmlns:sbm_pb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"
+ xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+ xsi:schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingDoppelantentempel/BuildingDoppelantentempelSchema.xsd">
+    <sbm_bu:dimensions>
+        <sbm_bu:height>
+            <sbm_ct:lowerBorder>150</sbm_ct:lowerBorder>
+        </sbm_bu:height>
+        <sbm_bu:length>
+            <sbm_ct:lowerBorder>1000</sbm_ct:lowerBorder>
+        </sbm_bu:length>
+        <sbm_bu:width>
+            <sbm_ct:lowerBorder>700</sbm_ct:lowerBorder>
+        </sbm_bu:width>
+        <sbm_bu:wallThickness>5</sbm_bu:wallThickness>
+    </sbm_bu:dimensions>
     <doppelantentempelParameters>
         <architraveHeight>20</architraveHeight>
         <metopeHeight>15</metopeHeight>
         <geisonHeight>15</geisonHeight>
     </doppelantentempelParameters>
-    <smcb_ro:roof>
-        <smcb_ro:roofDescriptor>
-            <smcb_ro:roofSlopeMain>
-                <smcb_ro:lowerBorder>0.25</smcb_ro:lowerBorder>
-            </smcb_ro:roofSlopeMain>
-            <smcb_ro:roofSlopeSide>
-                <smcb_ro:lowerBorder>1.56</smcb_ro:lowerBorder>
-            </smcb_ro:roofSlopeSide>
-            <smcb_ro:roofScaling>1.0</smcb_ro:roofScaling>
-            <smcb_ro:equalWeightForRoofSides>0.0</smcb_ro:equalWeightForRoofSides>
-        </smcb_ro:roofDescriptor>
-    </smcb_ro:roof>
+    <sbm_ro:roof>
+        <sbm_ro:roofDescriptor>
+            <sbm_ro:roofSlopeMain>
+                <sbm_ro:lowerBorder>0.25</sbm_ro:lowerBorder>
+            </sbm_ro:roofSlopeMain>
+            <sbm_ro:roofSlopeSide>
+                <sbm_ro:lowerBorder>1.56</sbm_ro:lowerBorder>
+            </sbm_ro:roofSlopeSide>
+            <sbm_ro:roofScaling>1.0</sbm_ro:roofScaling>
+            <sbm_ro:equalWeightForRoofSides>0.0</sbm_ro:equalWeightForRoofSides>
+        </sbm_ro:roofDescriptor>
+    </sbm_ro:roof>
     <buildingComponentsDoppelantentempel>
-        <smcb_co:roundstairs>
-            <smcb_co:numberOfSteps>4</smcb_co:numberOfSteps>
-            <smcb_co:stepHeight>7</smcb_co:stepHeight>
-            <smcb_co:stepWidth>150</smcb_co:stepWidth>
-        </smcb_co:roundstairs>
-        <smcb_co:fascia>
-            <smcb_co:componentModelSource>
-                <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
-            </smcb_co:componentModelSource>
-            <smcb_co:mouldingHeightRatio>0.6</smcb_co:mouldingHeightRatio>
-            <smcb_co:targetFloors>
-                <smcb_co:floorPosition>ALL</smcb_co:floorPosition>
-            </smcb_co:targetFloors>
-        </smcb_co:fascia>
-        <smcb_co:pillar>
-            <smcb_co:componentModelSource>
-                <smcb_co:modelCategory>Pillar_Dorisch</smcb_co:modelCategory>
-            </smcb_co:componentModelSource>
+        <sbm_co:roundstairs>
+            <sbm_co:numberOfSteps>4</sbm_co:numberOfSteps>
+            <sbm_co:stepHeight>7</sbm_co:stepHeight>
+            <sbm_co:stepWidth>150</sbm_co:stepWidth>
+        </sbm_co:roundstairs>
+        <sbm_co:fascia>
+            <sbm_co:componentModelSource>
+                <sbm_co:modelCategory>Moulding_Eckstein</sbm_co:modelCategory>
+            </sbm_co:componentModelSource>
+            <sbm_co:mouldingHeightRatio>0.6</sbm_co:mouldingHeightRatio>
+            <sbm_co:targetFloors>
+                <sbm_co:floorPosition>ALL</sbm_co:floorPosition>
+            </sbm_co:targetFloors>
+        </sbm_co:fascia>
+        <sbm_co:pillar>
+            <sbm_co:componentModelSource>
+                <sbm_co:modelCategory>Pillar_Dorisch</sbm_co:modelCategory>
+            </sbm_co:componentModelSource>
             
-            <smcb_co:numberOfPillarsLongside>14</smcb_co:numberOfPillarsLongside>
-            <smcb_co:numberOfPillarsBroadside>6</smcb_co:numberOfPillarsBroadside>
+            <sbm_co:numberOfPillarsLongside>14</sbm_co:numberOfPillarsLongside>
+            <sbm_co:numberOfPillarsBroadside>6</sbm_co:numberOfPillarsBroadside>
             
-            <!--<smcb_co:pillarDistanceRatio>0.1</smcb_co:pillarDistanceRatio>-->
-            <smcb_co:pillarFloorPosition>GROUND</smcb_co:pillarFloorPosition>
-        </smcb_co:pillar>
-        <smcb_co:edgeaddition>
-            <smcb_co:componentModelSource>
-                <smcb_co:modelCategory>Moulding_Eckstein</smcb_co:modelCategory>
-            </smcb_co:componentModelSource>
-            <smcb_co:edgeAdditionHeightRatio>0.05</smcb_co:edgeAdditionHeightRatio>
-            <smcb_co:targetFloors>
-                <smcb_co:floorPosition>ROOF</smcb_co:floorPosition>
-            </smcb_co:targetFloors>
-            <smcb_co:targetWalls>
-                <smcb_co:direction>ROOF_SIDE</smcb_co:direction>
-            </smcb_co:targetWalls>
-        </smcb_co:edgeaddition>
+            <!--<sbm_co:pillarDistanceRatio>0.1</sbm_co:pillarDistanceRatio>-->
+            <sbm_co:pillarFloorPosition>GROUND</sbm_co:pillarFloorPosition>
+        </sbm_co:pillar>
+        <sbm_co:edgeaddition>
+            <sbm_co:componentModelSource>
+                <sbm_co:modelCategory>Moulding_Eckstein</sbm_co:modelCategory>
+            </sbm_co:componentModelSource>
+            <sbm_co:edgeAdditionHeightRatio>0.05</sbm_co:edgeAdditionHeightRatio>
+            <sbm_co:targetFloors>
+                <sbm_co:floorPosition>ROOF</sbm_co:floorPosition>
+            </sbm_co:targetFloors>
+            <sbm_co:targetWalls>
+                <sbm_co:direction>ROOF_SIDE</sbm_co:direction>
+            </sbm_co:targetWalls>
+        </sbm_co:edgeaddition>
     </buildingComponentsDoppelantentempel>
 </buildingDoppelantentempel>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:smcb_ct="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-  xmlns:smcb_co="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
-  targetNamespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/Component"
+  xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+  xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+  targetNamespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
   elementFormDefault="qualified">
 
   <xs:import
-    namespace="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes"
-    schemaLocation="https://raw.github.com/pgunia/SemanticCityBuilder/master/Schema/CommonTypes/CommonTypes.xsd"/>
+    namespace="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+    schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes/CommonTypes.xsd"/>
 
   <!-- Component-Base-Descriptor -->
   <xs:element name="component">
@@ -19,20 +19,20 @@
     </xs:annotation>
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="smcb_ct:extern">
+        <xs:element ref="sbm_ct:extern">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Definition is loaded from an external XML-ressource.
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element ref="smcb_co:fascia"/>
-        <xs:element ref="smcb_co:door"/>
-        <xs:element ref="smcb_co:window"/>
-        <xs:element ref="smcb_co:windowLedge"/>
-        <xs:element ref="smcb_co:moulding"/>
-        <xs:element ref="smcb_co:pillar"/>
-        <xs:element ref="smcb_co:roundstairs"/>
-        <xs:element ref="smcb_co:edgeaddition"/>
+        <xs:element ref="sbm_co:fascia"/>
+        <xs:element ref="sbm_co:door"/>
+        <xs:element ref="sbm_co:window"/>
+        <xs:element ref="sbm_co:windowLedge"/>
+        <xs:element ref="sbm_co:moulding"/>
+        <xs:element ref="sbm_co:pillar"/>
+        <xs:element ref="sbm_co:roundstairs"/>
+        <xs:element ref="sbm_co:edgeaddition"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -40,13 +40,13 @@
   <xs:element name="componentModelSource">
     <xs:complexType>
       <xs:choice>
-        <xs:element name="modelCategory" type="smcb_co:modelPrefix">
+        <xs:element name="modelCategory" type="sbm_co:modelPrefix">
           <xs:annotation>
             <xs:documentation xml:lang="en"> The model is randomly chosen from all models provided
               within the given category. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element ref="smcb_ct:extern">
+        <xs:element ref="sbm_ct:extern">
           <xs:annotation>
             <xs:documentation xml:lang="en"> The model is loaded from a local or distant location
               and afterwards imported into the system. </xs:documentation>
@@ -59,12 +59,12 @@
 
   <xs:complexType name="comp">
     <xs:choice>
-      <xs:element ref="smcb_co:door"/>
-      <xs:element ref="smcb_co:fascia"/>
-      <xs:element ref="smcb_co:moulding"/>
-      <xs:element ref="smcb_co:pillar"/>
-      <xs:element ref="smcb_co:window"/>
-      <xs:element ref="smcb_co:edgeaddition" />
+      <xs:element ref="sbm_co:door"/>
+      <xs:element ref="sbm_co:fascia"/>
+      <xs:element ref="sbm_co:moulding"/>
+      <xs:element ref="sbm_co:pillar"/>
+      <xs:element ref="sbm_co:window"/>
+      <xs:element ref="sbm_co:edgeaddition" />
       <xs:element name="ledge"/>
     </xs:choice>
   </xs:complexType>
@@ -108,15 +108,15 @@
   <xs:element name="door">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource"/>
-        <xs:element name="distanceToCornerRatio" type="smcb_ct:floatFrom0To1">
+        <xs:element ref="sbm_co:componentModelSource"/>
+        <xs:element name="distanceToCornerRatio" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Proportion of the total length of the target quad.
               Describes the minimum distance of a door-model from a corner of the building.
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="doorToTargetQuadRatio" type="smcb_ct:range">
+        <xs:element name="doorToTargetQuadRatio" type="sbm_ct:range">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Ratio of the door-dimensions to the dimensions of the
               quad in which the door is positioned. </xs:documentation>
@@ -135,14 +135,14 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource">
+        <xs:element ref="sbm_co:componentModelSource">
           <xs:annotation>
             <xs:documentation xml:lang="en"> 3D-File from where the profile is loaded which is used
               to construct the Fascia. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element ref="smcb_co:mouldingHeightRatio"/>
-        <xs:element ref="smcb_co:targetFloors"/>
+        <xs:element ref="sbm_co:mouldingHeightRatio"/>
+        <xs:element ref="sbm_co:targetFloors"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -156,16 +156,16 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource"/>
-        <xs:element name="verticalAlignment" type="smcb_ct:verticalAlignmentEnum">
+        <xs:element ref="sbm_co:componentModelSource"/>
+        <xs:element name="verticalAlignment" type="sbm_ct:verticalAlignmentEnum">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Vertical position of the moulding with respect to the
               target quad. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element ref="smcb_co:mouldingHeightRatio"/>
-        <xs:element ref="smcb_co:targetFloors"/>
-        <xs:element ref="smcb_co:targetWalls"/>
+        <xs:element ref="sbm_co:mouldingHeightRatio"/>
+        <xs:element ref="sbm_co:targetFloors"/>
+        <xs:element ref="sbm_co:targetWalls"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -173,7 +173,7 @@
   <xs:element name="targetWalls">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="direction" type="smcb_ct:quadDirections" maxOccurs="unbounded">
+        <xs:element name="direction" type="sbm_ct:quadDirections" maxOccurs="unbounded">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Direction of all target quads a component should be applied.
             </xs:documentation>
@@ -190,12 +190,12 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="floorPosition" type="smcb_ct:floorPositions" maxOccurs="unbounded"/>
+        <xs:element name="floorPosition" type="sbm_ct:floorPositions" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="mouldingHeightRatio" type="smcb_ct:floatFrom0To1">
+  <xs:element name="mouldingHeightRatio" type="sbm_ct:floatFrom0To1">
     <xs:annotation>
       <xs:documentation> Ratio between Moulding- and Quadheight. </xs:documentation>
     </xs:annotation>
@@ -210,9 +210,9 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource"/>
+        <xs:element ref="sbm_co:componentModelSource"/>
         <xs:choice>
-          <xs:element name="pillarDistanceRatio" type="smcb_ct:floatFrom0To1">
+          <xs:element name="pillarDistanceRatio" type="sbm_ct:floatFrom0To1">
             <xs:annotation>
               <xs:documentation xml:lang="en"> Minimum distance between two pillars as proportion of
                 the total length of the target edge. </xs:documentation>
@@ -235,7 +235,7 @@
             </xs:element>
           </xs:sequence>
         </xs:choice>
-        <xs:element name="pillarFloorPosition" type="smcb_ct:floorPositions">
+        <xs:element name="pillarFloorPosition" type="sbm_ct:floorPositions">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Element defines the floor in which pillars are
               positioned by the system. </xs:documentation>
@@ -265,14 +265,14 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource"/>
-        <xs:element name="translationRatioForWindows" type="smcb_ct:floatFrom0To1">
+        <xs:element ref="sbm_co:componentModelSource"/>
+        <xs:element name="translationRatioForWindows" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Proportion of the total height of the target quad which
               is used to move the window towards the quads lower base edge. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="minDistanceBetweenWindowsRatio" type="smcb_ct:floatFrom0To1">
+        <xs:element name="minDistanceBetweenWindowsRatio" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en">
               <xs:annotation> Proportion of the total width of the target quad which is used as a
@@ -280,7 +280,7 @@
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="windowToTargetQuadRatio" type="smcb_ct:range">
+        <xs:element name="windowToTargetQuadRatio" type="sbm_ct:range">
           <xs:annotation>
             <xs:documentation> Proportion of the total height of the target quad which is allowed as
               maximum height for the positioned window. </xs:documentation>
@@ -298,8 +298,8 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource"/>
-        <xs:element name="ledgeToTargetQuadRatio" type="smcb_ct:floatFrom0To1">
+        <xs:element ref="sbm_co:componentModelSource"/>
+        <xs:element name="ledgeToTargetQuadRatio" type="sbm_ct:floatFrom0To1">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Proportion of the ledge height compared to the total
               height of the target quad. </xs:documentation>
@@ -318,20 +318,20 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="smcb_co:componentModelSource">
+        <xs:element ref="sbm_co:componentModelSource">
           <xs:annotation>
             <xs:documentation xml:lang="en"> 3D-File from where the profile is loaded which is used
               to construct the Fascia. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element ref="smcb_co:edgeAdditionHeightRatio"/>
-        <xs:element ref="smcb_co:targetFloors"/>
-        <xs:element ref="smcb_co:targetWalls"/>
+        <xs:element ref="sbm_co:edgeAdditionHeightRatio"/>
+        <xs:element ref="sbm_co:targetFloors"/>
+        <xs:element ref="sbm_co:targetWalls"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="edgeAdditionHeightRatio" type="smcb_ct:floatFrom0To1">
+  <xs:element name="edgeAdditionHeightRatio" type="sbm_ct:floatFrom0To1">
     <xs:annotation>
       <xs:documentation xml:lang="en"> Defines the size of the rescaled edgeaddition-profile as
         proportion of the target quad-height. </xs:documentation>
@@ -347,13 +347,13 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="stairWidth" minOccurs="0" type="smcb_ct:positiveFloat">
+        <xs:element name="stairWidth" minOccurs="0" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Width of the rectangular footprint from which the steps
               are constructed. (optional) </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="stairLength" minOccurs="0" type="smcb_ct:positiveFloat">
+        <xs:element name="stairLength" minOccurs="0" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Length of the rectangular footprint from which the
               steps are constructed. (optional) </xs:documentation>
@@ -365,12 +365,12 @@
             </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="stepHeight" type="smcb_ct:positiveFloat">
+        <xs:element name="stepHeight" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Height of a single step. </xs:documentation>
           </xs:annotation>
         </xs:element>
-        <xs:element name="stepWidth" type="smcb_ct:positiveFloat">
+        <xs:element name="stepWidth" type="sbm_ct:positiveFloat">
           <xs:annotation>
             <xs:documentation xml:lang="en"> Width of a single step. </xs:documentation>
           </xs:annotation>
