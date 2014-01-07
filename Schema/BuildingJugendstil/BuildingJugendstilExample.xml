@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<buildingJugendstil
-    xmlns="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
-    xsi:schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil 
-    https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-    xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
-    xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
-    xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
-    xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
-    xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
-    xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
-    xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
-    xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
-    xmlns:sbm_pb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"
-    xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor">
+<buildingJugendstil xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
+ xsi1:schemaLocation="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil/BuildingJugendstilSchema.xsd"
+ xmlns="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/BuildingJugendstil"
+ xmlns:sbm_fl="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Floor"
+ xmlns:sbm_pb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/PolygonFootprint"
+ xmlns:sbm_op="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Objectplacement"
+ xmlns:sbm_ro="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Roof"
+ xmlns:sbm_co="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Component"
+ xmlns:sbm_eb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ExampleBasedSynthesis"
+ xmlns:sbm_bu="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Building"
+ xmlns:sbm_ct="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/CommonTypes"
+ xmlns:sbm_cb="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/ClassBasedFootprint"
+ xmlns:sbm_fp="https://raw.github.com/pgunia/SemanticBuildingModeler_Ressources/master/Schema/Footprint"
+ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
     <sbm_bu:dimensions>
         <sbm_bu:height>
             <sbm_ct:lowerBorder>100</sbm_ct:lowerBorder>
